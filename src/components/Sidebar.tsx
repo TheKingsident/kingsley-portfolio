@@ -8,7 +8,7 @@ const Sidebar = () => {
     <aside className="sidebar">
       {/* Profile Section */}
       <div className="profile">
-        <img src="/assets/profile.jpg" alt="Profile" className="profile-img" />
+        <img src="src/assets/profile.jpg" alt="Kingsley Usa" className="profile-img" />
         <h2 className="name">Kingsley Usa</h2>
         <p className="title">Web Developer | Software Engineer</p>
       </div>
