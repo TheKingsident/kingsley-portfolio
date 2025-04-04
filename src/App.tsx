@@ -13,6 +13,7 @@ function App() {
       <div className="app-container">
         <Sidebar />
         <main className="content">
+          Main Content Here
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />
