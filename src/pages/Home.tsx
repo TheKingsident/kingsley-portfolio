@@ -7,8 +7,8 @@ const Home = () => {
         <span className="hello">👋 HELLO!</span>
         <h1>I'm <span className="highlight">Kingsley</span>.</h1>
         <p>
-          I am a web developer with experience in building modern websites and applications.  
-          I specialize in React, TypeScript, and UI/UX design.
+          I am a software engineer with experience in building modern websites and applications.  
+          I specialize in Python, React, TypeScript, and API development.
         </p>
         <div className="buttons">
           <a href="#contact" className="btn primary">Hire Me</a>
