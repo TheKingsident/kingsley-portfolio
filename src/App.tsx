@@ -5,15 +5,14 @@ import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import { AnimatePresence } from "framer-motion";
-import "./styles/globals.scss";
+import "./index.css"; // assuming you're using Tailwind here
 
 function App() {
   return (
     <Router>
-      <div className="app-container">
+      <div className="flex min-h-screen bg-gray-100 text-gray-900">
         <Sidebar />
-        <main className="content">
-          Main Content Here
+        <main className="flex-1 p-6">
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />
