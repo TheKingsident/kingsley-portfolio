@@ -1,23 +1,42 @@
-import "./Home.scss";
-
 const Home = () => {
   return (
-    <section className="home">
-      <div className="home-content">
-        <span className="hello">👋 HELLO!</span>
-        <h1>I'm <span className="highlight">Kingsley</span>.</h1>
-        <p>
+    <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen w-full px-8 md:px-16 bg-gradient-to-br from-white to-[#f7faff] overflow-hidden">
+      {/* Floating Circles */}
+      <div className="absolute w-32 h-32 bg-orange-300 rounded-full opacity-50 animate-float top-10 left-10"></div>
+      <div className="absolute w-24 h-24 bg-blue-300 rounded-full opacity-50 animate-float-delayed bottom-20 right-20"></div>
+      <div className="absolute w-16 h-16 bg-purple-300 rounded-full opacity-50 animate-float top-1/3 right-1/4"></div>
+      <div className="absolute w-20 h-20 bg-pink-300 rounded-full opacity-50 animate-float-delayed bottom-1/4 left-1/4"></div>
+
+      {/* Content Section */}
+      <div className="max-w-xl text-center md:text-left space-y-6 z-10">
+        <div className="text-lg font-semibold text-orange-500 flex items-center gap-2">
+          <span>👋</span> HELLO!
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+          I'm <span className="text-orange-500">Kingsley</span>.
+        </h1>
+        <p className="text-gray-600 text-base md:text-lg leading-relaxed">
           I am a software engineer with experience in building modern websites and applications.  
           I specialize in Python, React, TypeScript, and API development.
         </p>
-        <div className="buttons">
-          <a href="#contact" className="btn primary">Hire Me</a>
-          <a href="#works" className="btn secondary">View Works →</a>
+        <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
+          <a href="#contact" className="px-6 py-3 bg-orange-500 text-white rounded-xl font-semibold shadow hover:bg-orange-600 transition">
+            Hire Me
+          </a>
+          <a href="#works" className="px-6 py-3 border-2 border-orange-500 text-orange-500 rounded-xl font-semibold hover:bg-orange-500 hover:text-white transition">
+            View Works →
+          </a>
         </div>
       </div>
-      <div className="home-image">
-        <img src="src/assets/profile-main2.png" alt="Profile" />
-        <div className="circle-bg"></div>
+
+      {/* Image Section */}
+      <div className="relative w-[300px] md:w-[450px] lg:w-[500px] mt-12 md:mt-0">
+        <div className="absolute w-[600px] h-[600px] bg-[#ffe0cc] rounded-full top-[-10%] left-[-10%] -z-10"></div>
+        <img
+          src="src/assets/profile-main2.png"
+          alt="Profile"
+          className="w-full h-auto rounded-lg relative z-10 translate-x-[20%] -translate-y-[5%]"
+        />
       </div>
     </section>
   );

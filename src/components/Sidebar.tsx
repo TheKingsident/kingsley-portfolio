@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -6,7 +7,6 @@ import {
   faEnvelope,
   faBlog,
   faCube,
-  faMap,
   faSuitcase
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -17,7 +17,46 @@ import {
   faDribbble
 } from "@fortawesome/free-brands-svg-icons";
 
+const navItems = [
+  { id: "home", label: "Home", icon: faHome },
+  { id: "about", label: "About", icon: faUser },
+  { id: "services", label: "Services", icon: faBriefcase },
+  { id: "experience", label: "Experience", icon: faSuitcase },
+  { id: "works", label: "Works", icon: faCube },
+  { id: "blog", label: "Blog", icon: faBlog },
+  { id: "contact", label: "Contact", icon: faEnvelope }
+];
+
 const Sidebar = () => {
+  const [active, setActive] = useState("home");
+
+  // Update active section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      for (const item of navItems) {
+        const section = document.getElementById(item.id);
+        if (section) {
+          const { top } = section.getBoundingClientRect();
+          if (top <= 100 && top + section.offsetHeight > 100) {
+            setActive(item.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Smooth scroll on click
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <aside className="w-[250px] h-screen bg-gradient-to-b from-[#e8ecf7] to-[#f6f1f7] flex flex-col items-center px-6 py-8 rounded-l-3xl shadow-lg">
       {/* Profile Section */}
@@ -37,69 +76,21 @@ const Sidebar = () => {
       {/* Navigation Links */}
       <nav className="w-full">
         <ul className="flex flex-col gap-3 w-full">
-          <li>
-            <a
-              href="#home"
-              className="flex items-center gap-3 px-4 py-2 rounded-lg bg-white text-[#ff7b54] font-medium transition"
-            >
-              <FontAwesomeIcon icon={faHome} />
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              className="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:text-[#ff7b54] transition"
-            >
-              <FontAwesomeIcon icon={faUser} />
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#services"
-              className="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:text-[#ff7b54] transition"
-            >
-              <FontAwesomeIcon icon={faBriefcase} />
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="#experience"
-              className="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:text-[#ff7b54] transition"
-            >
-              <FontAwesomeIcon icon={faSuitcase} />
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              href="#works"
-              className="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:text-[#ff7b54] transition"
-            >
-              <FontAwesomeIcon icon={faCube} />
-              Works
-            </a>
-          </li>
-          <li>
-            <a
-              href="#blog"
-              className="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:text-[#ff7b54] transition"
-            >
-              <FontAwesomeIcon icon={faBlog} />
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:text-[#ff7b54] transition"
-            >
-              <FontAwesomeIcon icon={faEnvelope} />
-              Contact
-            </a>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <button
+                onClick={() => scrollToSection(item.id)}
+                className={`flex items-center gap-3 px-4 py-2 rounded-lg w-full text-left transition font-medium ${
+                  active === item.id
+                    ? "bg-white text-[#ff7b54]"
+                    : "bg-transparent text-gray-600 hover:text-[#ff7b54] hover:bg-white/30"
+                }`}
+              >
+                <FontAwesomeIcon icon={item.icon} />
+                {item.label}
+              </button>
+            </li>
+          ))}
         </ul>
       </nav>
 
@@ -109,7 +100,7 @@ const Sidebar = () => {
           <a
             key={i}
             href="#"
-            className="w-9 h-9 bg-white rounded-md flex items-center justify-center text-gray-600 hover:text-[#ff7b54] shadow-sm transition"
+            className="w-9 h-9 bg-white rounded-md flex items-center justify-center text-gray-600 hover:text-[#ff7b54] shadow-sm transition transform hover:scale-105"
           >
             <FontAwesomeIcon icon={icon} />
           </a>
