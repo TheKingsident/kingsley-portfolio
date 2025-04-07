@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen w-full px-8 md:px-16 bg-gradient-to-br from-white to-[#f7faff] overflow-hidden">
+    <section id="home" className="relative flex flex-col md:flex-row items-center justify-between min-h-screen w-full px-8 md:px-16 bg-gradient-to-br from-white to-[#f7faff] overflow-hidden">
       {/* Floating Circles */}
       <div className="absolute w-32 h-32 bg-orange-300 rounded-full opacity-50 animate-float top-10 left-10"></div>
       <div className="absolute w-24 h-24 bg-blue-300 rounded-full opacity-50 animate-float-delayed bottom-20 right-20"></div>
@@ -22,7 +22,7 @@ const Home = () => {
         <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
           <a
             href="#contact"
-            className="px-6 py-3 bg-orange-100 text-orange-500 rounded-xl font-semibold shadow hover:bg-orange-600 transition-all self-start w-[120px] flex justify-center items-center"
+            className="px-6 py-3 bg-orange-100 text-orange-500 rounded-xl font-semibold shadow hover:bg-orange-300 hover:text-white transition-all self-start w-[120px] flex justify-center items-center"
           >
             Hire Me
           </a>

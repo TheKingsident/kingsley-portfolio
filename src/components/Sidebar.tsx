@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -7,14 +6,14 @@ import {
   faEnvelope,
   faBlog,
   faCube,
-  faSuitcase
+  faSuitcase,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
   faFacebook,
   faInstagram,
   faBehance,
-  faDribbble
+  faDribbble,
 } from "@fortawesome/free-brands-svg-icons";
 
 const navItems = [
@@ -24,37 +23,17 @@ const navItems = [
   { id: "experience", label: "Experience", icon: faSuitcase },
   { id: "works", label: "Works", icon: faCube },
   { id: "blog", label: "Blog", icon: faBlog },
-  { id: "contact", label: "Contact", icon: faEnvelope }
+  { id: "contact", label: "Contact", icon: faEnvelope },
 ];
 
-const Sidebar = () => {
-  const [active, setActive] = useState("home");
+interface SidebarProps {
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+}
 
-  // Update active section on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      for (const item of navItems) {
-        const section = document.getElementById(item.id);
-        if (section) {
-          const { top } = section.getBoundingClientRect();
-          if (top <= 100 && top + section.offsetHeight > 100) {
-            setActive(item.id);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Smooth scroll on click
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+const Sidebar = ({ activeSection, setActiveSection }: SidebarProps) => {
+  const handleNavClick = (id: string) => {
+    setActiveSection(id);
   };
 
   return (
@@ -79,10 +58,10 @@ const Sidebar = () => {
           {navItems.map((item) => (
             <li key={item.id}>
               <button
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavClick(item.id)}
                 className={`flex items-center gap-3 px-4 py-2 rounded-lg w-full text-left transition font-medium ${
-                  active === item.id
-                    ? "bg-white text-[#ff7b54]"
+                  activeSection === item.id
+                    ? "bg-white text-[#ff7b54] animate-pulse-once"
                     : "bg-transparent text-gray-600 hover:text-[#ff7b54] hover:bg-white/30"
                 }`}
               >

@@ -1,30 +1,45 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
-import { AnimatePresence } from "framer-motion";
-import "./index.css"; // assuming you're using Tailwind here
+// import Services from "./pages/Services";
+//import Experience from "./pages/Experience";
+//import Works from "./pages/Works";
+//import Blog from "./pages/Blog";
+//import Contact from "./pages/Contact";
 
-function App() {
+const App = () => {
+  const [activeSection, setActiveSection] = useState("home");
+
+  const renderSection = () => {
+    switch (activeSection) {
+      case "home":
+        return <Home />;
+      case "about":
+        return <About />;
+      case "services":
+        return <Services />;
+      case "experience":
+        return <Experience />;
+      case "works":
+        return <Works />;
+      case "blog":
+        return <Blog />;
+      case "contact":
+        return <Contact />;
+      default:
+        return <Home />;
+    }
+  };
+
   return (
-    <Router>
-      <div className="flex min-h-screen bg-gray-100 text-gray-900">
-        <Sidebar />
-        <main className="flex-1">
-          <AnimatePresence mode="wait">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </AnimatePresence>
-        </main>
-      </div>
-    </Router>
+    <div className="flex">
+      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+      <main className="flex-1">
+        <div className="animate-fade-in">{renderSection()}</div>
+      </main>
+    </div>
   );
-}
+};
 
 export default App;
