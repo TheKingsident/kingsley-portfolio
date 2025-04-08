@@ -11,18 +11,61 @@ const About = () => {
       <div className="pt-10 text-5xl">
         About Me
       </div>
-      <div className="flex items-center gap-20 py-16">
-        <div className="relative w-[400px] h-[600px]">
+      <div className="flex flex-col md:flex-row items-start gap-10 ">
+        {/* Image Section */}
+        <div className="w-full md:w-[300px] relative">
           <img
-          src="src/assets/profile-main4.jpg"
-          alt="Kingsley Usa"
-          className="w-full h-auto rounded-lg relative"
+            src="src/assets/profile-main4.jpg"
+            alt="Kingsley Usa"
+            className="w-full h-auto rounded-xl object-cover"
           />
-
+          
         </div>
-        
 
+        {/* Bio + Details Section */}
+        <div className="flex-1 flex flex-col gap-6">
+          {/* Bio Card */}
+          <div className="bg-white bg-opacity-60 backdrop-blur-md p-6 rounded-xl shadow">
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">Bio</h2>
+            <p className="text-gray-600 leading-relaxed">
+              Hello! My name is Kingsley Usa, and I am a passionate software engineer with a love for creating
+              innovative and efficient solutions. I specialize in building web applications using modern technologies like React, TypeScript, and Node.js.
+            </p>
+          </div>
+
+          {/* Personal Details */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm bg-white bg-opacity-60 backdrop-blur-md p-4 rounded-xl shadow">
+            <div>
+              <p className="text-gray-500">Age</p>
+              <p className="font-semibold text-gray-800">28</p>
+            </div>
+            <div>
+              <p className="text-gray-500">Residence</p>
+              <p className="font-semibold text-gray-800">Nigeria</p>
+            </div>
+            <div>
+              <p className="text-gray-500">Email</p>
+              <p className="font-semibold text-gray-800">hello@example.com</p>
+            </div>
+            <div>
+              <p className="text-gray-500">Phone</p>
+              <p className="font-semibold text-gray-800">+234-1234-5678</p>
+            </div>
+          </div>
+
+          {/* Download CV Button */}
+          <div>
+            <a
+              href="/path-to-cv.pdf"
+              className="inline-block px-6 py-3 bg-orange-200 text-orange-700 font-semibold rounded-full shadow hover:bg-orange-300 transition"
+              download
+            >
+              Download CV <span className="ml-2">⬇️</span>
+            </a>
+          </div>
+        </div>
       </div>
+
       <div>
         Achievements
       </div>
