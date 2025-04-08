@@ -37,7 +37,7 @@ const Sidebar = ({ activeSection, setActiveSection }: SidebarProps) => {
   };
 
   return (
-    <aside className="w-[250px] h-screen bg-gradient-to-b from-[#e8ecf7] to-[#f6f1f7] flex flex-col items-center px-6 py-8 rounded-l-3xl shadow-lg">
+    <aside className="w-[250px] min-h-screen bg-gradient-to-b from-[#e8ecf7] to-[#f6f1f7] flex flex-col items-center px-6 py-8 rounded-l-3xl shadow-lg">
       {/* Profile Section */}
       <div className="text-center mb-8">
         <div className="relative w-24 h-24 mx-auto">
