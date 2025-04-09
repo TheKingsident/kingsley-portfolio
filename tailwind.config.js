@@ -21,6 +21,21 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".hide-scrollbar": {
+          /* Hide scrollbar for Chrome, Safari, and Edge */
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+          /* Hide scrollbar for Firefox */
+          "scrollbar-width": "none",
+          /* Hide scrollbar for Internet Explorer and Edge (legacy) */
+          "-ms-overflow-style": "none",
+        },
+      });
+    },
+  ],
 }
 
