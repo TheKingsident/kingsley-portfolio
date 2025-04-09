@@ -33,11 +33,13 @@ const App = () => {
   };
 
   return (
-    <div className="flex">
-      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
-      <main className="flex-1">
-        <div className="animate-fade-in">{renderSection()}</div>
-      </main>
+    <div className="flex min-h-screen items-center justify-center border-2 border-amber-50">
+      <div className="flex max-w-screen-2xl max-h-[80vh] rounded-3xl">
+        <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+        <main className="flex-1 overflow-y-auto">
+          <div className="animate-fade-in">{renderSection()}</div>
+        </main>
+      </div>
     </div>
   );
 };
