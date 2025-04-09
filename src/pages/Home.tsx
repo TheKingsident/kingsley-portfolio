@@ -37,11 +37,11 @@ const Home = () => {
 
       {/* Image Section */}
       <div className="relative w-[300px] md:w-[450px] lg:w-[500px] mt-12 md:mt-0">
-        <div className="absolute w-[600px] h-[600px] bg-[#ffe0cc] rounded-full top-[-10%] left-[-10%] -z-10"></div>
+        <div className="absolute w-[600px] h-[600px] bg-[#ffe0cc] -z-10"></div>
         <img
           src="src/assets/profile-main2.png"
           alt="Profile"
-          className="w-full h-auto rounded-lg relative"
+          className="w-full h-auto relative"
         />
       </div>
     </section>
