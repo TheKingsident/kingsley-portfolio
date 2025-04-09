@@ -79,9 +79,13 @@ const About = () => {
         <FontAwesomeIcon icon={faMedal} className="text-orange-500" />
         Achievements
       </div>
-      <div>
-        Fun Facts
+
+      <div className="flex flex-col gap-10">
+      <h2 className="pt-10 text-4xl text-gray-900">
+          Fun Facts
+        </h2>
       </div>
+      
       
       
     </section>
