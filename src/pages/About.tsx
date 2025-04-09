@@ -1,4 +1,5 @@
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser";
+import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const About = () => {
@@ -62,7 +63,7 @@ const About = () => {
             <div>
               <a
                 href="/path-to-cv.pdf"
-                className="inline-block px-6 py-3 bg-orange-200 text-orange-700 font-semibold rounded-full shadow hover:bg-orange-300 transition"
+                className="inline-block px-6 py-3 bg-orange-200 text-orange-700 font-semibold rounded-2xl shadow hover:bg-orange-300 transition"
                 download
               >
                 Download CV <span className="ml-2">⬇️</span>
@@ -74,7 +75,8 @@ const About = () => {
   
       
 
-      <div>
+      <div className="flex items-center gap-2 bg-white px-10 py-1 rounded-full w-fit text-sm mt-20">
+        <FontAwesomeIcon icon={faMedal} className="text-orange-500" />
         Achievements
       </div>
       <div>
