@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,6 +10,23 @@ import About from "./pages/About";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [showScrollbar, setShowScrollbar] = useState(false);
+
+  // Function to show the scrollbar
+  const showScrollbarTemporarily = () => {
+    setShowScrollbar(true);
+  };
+
+  // Use useEffect to hide the scrollbar after 2 seconds
+  useEffect(() => {
+    if (showScrollbar) {
+      const timer = setTimeout(() => {
+        setShowScrollbar(false);
+      }, 2000); // 2000ms = 2 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [showScrollbar]);
 
   const renderSection = () => {
     switch (activeSection) {
@@ -36,7 +53,11 @@ const App = () => {
     <div className="flex min-h-screen items-center justify-center border-2 border-amber-50">
       <div className="flex max-w-screen-2xl max-h-[80vh] rounded-3xl">
         <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
-        <main className="flex-1 overflow-y-auto hide-scrollbar">
+        <main className={`flex-1 overflow-y-auto hide-scrollbar ${
+          showScrollbar ? "show-scrollbar" : "hide-scrollbar"
+        }`}
+        onMouseEnter={showScrollbarTemporarily}
+        onScroll={showScrollbarTemporarily}>
           <div className="animate-fade-in">{renderSection()}</div>
         </main>
       </div>
