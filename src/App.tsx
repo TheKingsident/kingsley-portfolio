@@ -51,7 +51,7 @@ const App = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <div className="flex w-9/12 max-h-[80vh] border-2 rounded-3xl border-amber-50 overflow-hidden">
+      <div className="flex w-9/12 max-h-[80vh] border-1 rounded-3xl border-amber-50 overflow-hidden">
         <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
         <main className={`flex-1 overflow-y-auto hide-scrollbar ${
           showScrollbar ? "show-scrollbar" : "hide-scrollbar"
