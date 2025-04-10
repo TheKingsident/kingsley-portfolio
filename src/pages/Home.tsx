@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <section id="home" className="relative flex flex-col md:flex-row items-center justify-between w-full h-screen px-8 md:px-16 bg-gradient-to-br from-white to-[#f7faff] overflow-hidden">
+    <section id="home" className="relative flex flex-col md:flex-row items-center justify-between w-full min-h-screen px-8 md:px-16 bg-gradient-to-br from-white to-[#f7faff] overflow-hidden">
       {/* Floating Circles */}
       <div className="absolute w-32 h-32 bg-orange-300 rounded-full opacity-50 animate-float top-10 left-10"></div>
       <div className="absolute w-24 h-24 bg-blue-300 rounded-full opacity-50 animate-float-delayed bottom-20 right-20"></div>
