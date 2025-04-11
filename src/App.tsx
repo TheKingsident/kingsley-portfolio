@@ -92,7 +92,7 @@ const App = () => {
         item.removeEventListener("mouseleave", onMouseHoverOut);
       });
     };
-  }, [activeSection]);
+  }, [activeSectio]);
 
 
   return (
