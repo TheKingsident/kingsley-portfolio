@@ -23,15 +23,15 @@
 /* Style the custom cursor */
 .custom-cursor {
   position: fixed;
-  width: 20px;
-  height: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.3); /* Transparent border */
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: transparent;
   border-radius: 50%;
   pointer-events: none; /* Ensure the cursor div doesn't interfere with clicks */
   transform: translate(-50%, -50%); /* Center the circle on the mouse pointer */
-  transition: all 0.3s ease; /* Smooth transition for size and color changes */
-  z-index: 9999; /* Ensure the cursor is above other elements */
+  transition: top 0.1s ease, left 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border 0.3s ease; /* Smooth transition for size and color changes */
+  z-index: 9999;
 }
 
 /* Hover state for buttons and links */
