@@ -37,7 +37,7 @@ const Home = () => {
 
       {/* Image Section */}
       <div className="relative w-[300px] md:w-[450px] lg:w-[400px] max-h-[50vh] mt-12 md:mt-0">
-        <div className="absolute w-[450px] h-[450px] bg-[#ffe0cc] transform -translate-x-44 rounded-full translate-y-40  "></div>
+        <div className="absolute w-[450px] h-[450px] bg-[#ffe0cc] transform -translate-x-44 rounded-full translate-y-40 animate-pulse"></div>
         <img
           src="src/assets/profile-main2.png"
           alt="Profile"
