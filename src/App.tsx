@@ -134,7 +134,7 @@ const App = () => {
       <div className="flex w-full max-w-[1500px] lg:h-[80vh] border xl:rounded-3xl border-amber-50 overflow-hidden mx-auto">
         {/* Sidebar */}
         <div
-          className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
+          className={`fixed top-0 left-0 h-full xl:w-[300px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
             isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } xl:translate-x-0 xl:static xl:shadow-none`}
         >
