@@ -13,13 +13,13 @@ const About = () => {
         <h2 className="pt-10 text-4xl text-gray-900">
           About Me
         </h2>
-        <div className="flex flex-col md:flex-row items-start gap-10 ">
+        <div className="flex flex-col lg:flex-row items-start gap-10 ">
           {/* Image Section */}
-          <div className="w-full md:w-[300px] relative">
+          <div className="w-[300px] relative mx-auto">
             <img
               src="src/assets/profile-main4.jpg"
               alt="Kingsley Usa"
-              className="w-full h-auto rounded-xl object-cover"
+              className="rounded-xl object-cover"
             />
             
           </div>

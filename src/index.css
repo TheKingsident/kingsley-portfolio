@@ -41,3 +41,73 @@
   background-color: rgba(128, 128, 128, 0.5); /* Grey with 50% opacity */
   border: none; /* Remove the border on hover */
 }
+
+/* Ensure the main element reserves space for the scrollbar at all times */
+main {
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Wrapper inside main to reserve space for the scrollbar */
+.scroll-wrapper {
+  position: relative;
+  width: 100%;
+  padding-right: 15px; /* Reserve space for the scrollbar */
+  box-sizing: border-box; /* Ensure padding doesn't affect the total width */
+}
+
+/* Hide the scrollbar completely but reserve its space */
+.hide-scrollbar::-webkit-scrollbar {
+  width: 15px; /* Reserve space */
+}
+
+.hide-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Completely hide scrollbar in IE/Edge */
+  scrollbar-width: none; /* Completely hide scrollbar in Firefox */
+}
+
+/* Show the scrollbar with a styled appearance */
+.show-scrollbar::-webkit-scrollbar {
+  width: 15px;
+}
+
+.show-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.show-scrollbar {
+  -ms-overflow-style: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* Custom cursor styles (unchanged) */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+  z-index: 9999;
+}
