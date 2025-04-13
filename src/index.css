@@ -23,8 +23,8 @@
 /* Style the custom cursor */
 .custom-cursor {
   position: fixed;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: transparent;
   border-radius: 50%;
@@ -36,8 +36,8 @@
 
 /* Hover state for buttons and links */
 .custom-cursor.hover {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background-color: rgba(128, 128, 128, 0.5); /* Grey with 50% opacity */
   border: none; /* Remove the border on hover */
 }
