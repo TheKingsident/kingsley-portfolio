@@ -41,7 +41,7 @@ const Home = () => {
         <img
           src="src/assets/profile-main2.png"
           alt="Profile"
-          className="relative transform -translate-x-1/3 translate-y-20"
+          className="relative transform -translate-x-1/3 translate-y-5"
         />
       </div>
     </section>
