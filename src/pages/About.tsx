@@ -1,5 +1,8 @@
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser";
-import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import { faMedal, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faReact, faPython, faNode, faJs } from "@fortawesome/free-brands-svg-icons";
+import { SiDjango, SiTypescript, SiTailwindcss, SiNextdotjs, SiGnubash } from "react-icons/si";
+import { BiLogoTypescript } from "react-icons/bi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const About = () => {
@@ -91,6 +94,20 @@ const About = () => {
       </div>
   
       
+
+      <div className="flex items-center gap-2 bg-white px-10 py-1 rounded-full w-fit text-sm mt-20">
+        <FontAwesomeIcon icon={faLaptopCode} className="text-orange-500" />
+        Technologies I work with
+      </div>
+
+      <div className="flex flex-col gap-10">
+      <h2 className="pt-10 text-4xl text-gray-900">
+          Tech Stack
+        </h2>
+        <div className="grid">
+
+        </div>
+      </div>
 
       <div className="flex items-center gap-2 bg-white px-10 py-1 rounded-full w-fit text-sm mt-20">
         <FontAwesomeIcon icon={faMedal} className="text-orange-500" />
