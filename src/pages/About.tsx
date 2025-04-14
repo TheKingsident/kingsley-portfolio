@@ -110,7 +110,7 @@ const About = () => {
             <p className="text-gray-900">C</p> 
           </div>
           <div className="flex flex-col items-center">
-            <FontAwesomeIcon icon={faPython} className="text-5xl text-blue-500" />
+            <img src="src/assets/python.svg" width={50} alt="Python" className="text-5xl text-blue-500" />
             <p className="text-gray-900">Python</p>
           </div>
           <div className="flex flex-col items-center">
@@ -130,16 +130,16 @@ const About = () => {
             <p className="text-gray-900">Django</p>
           </div>
           <div className="flex flex-col items-center">
-            <FontAwesomeIcon icon={faNode} className="text-5xl text-blue-500" />
-            <p className="text-green-700">Node.js</p>
+            <FontAwesomeIcon icon={faNode} className="text-5xl text-green-700" />
+            <p className="text-gray-900">Node.js</p>
           </div>
           <div className="flex flex-col items-center">
             <SiGnubash className="text-5xl text-gray-600" />
             <p className="text-gray-900">Bash</p>
           </div>
           <div className="flex flex-col items-center">
-            <SiTailwindcss className="text-5xl text-blue-500" />
-            <p className="text-cyan-400">Tailwind CSS</p>
+            <SiTailwindcss className="text-5xl text-cyan-400" />
+            <p className="text-gray-900">Tailwind CSS</p>
           </div>
 
         </div>
