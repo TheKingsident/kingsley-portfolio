@@ -45,11 +45,3 @@ export interface ExperienceItem {
   ];
   
   export default experienceData;
-// This file contains the experience data for the Experience section of the portfolio.
-// Each experience item includes a date range, title, description, and a color class for styling.
-// The experienceData array can be imported and used in the Experience component to render the experience section dynamically.
-// The color property is used to apply different colors to the experience items based on their category or significance.
-// The experienceData array can be easily extended or modified to include more experiences or change existing ones.
-// The data structure allows for easy mapping and rendering in the Experience component.
-// The experienceData array can be used in conjunction with a mapping function to dynamically generate the experience items in the UI.
-// The experienceData array is structured to be easily readable and maintainable, making it simple to update or add new experiences.  
