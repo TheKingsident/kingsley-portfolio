@@ -1,7 +1,7 @@
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser";
 import { faMedal, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
-import { faReact, faPython, faNode, faJs } from "@fortawesome/free-brands-svg-icons";
-import { SiDjango, SiTypescript, SiTailwindcss, SiNextdotjs, SiGnubash } from "react-icons/si";
+import { faReact, faNode, faJs } from "@fortawesome/free-brands-svg-icons";
+import { SiDjango, SiTailwindcss, SiNextdotjs, SiGnubash } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -104,44 +104,49 @@ const About = () => {
       <h2 className="pt-10 text-4xl text-gray-900">
           Tech Stack
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="flex flex-col items-center">
             <img src="src/assets/c-programming-144.svg" width={50} alt="C Programming" className="text-5xl text-blue-500" />
-            <p className="text-gray-900">C</p> 
+            <p className="text-gray-500">C</p> 
           </div>
           <div className="flex flex-col items-center">
             <img src="src/assets/python.svg" width={50} alt="Python" className="text-5xl text-blue-500" />
-            <p className="text-gray-900">Python</p>
+            <p className="text-gray-500">Python</p>
           </div>
           <div className="flex flex-col items-center">
             <FontAwesomeIcon icon={faJs} className="text-5xl text-yellow-500" />
-            <p className="text-gray-900">JavaScript</p>
+            <p className="text-gray-500">JavaScript</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <BiLogoTypescript className="text-5xl text-blue-300" />
+            <p className="text-gray-500">TypeScript</p>
           </div>
           <div className="flex flex-col items-center">
             <FontAwesomeIcon icon={faReact} className="text-5xl text-blue-500" />
-            <p className="text-gray-900">React</p>
+            <p className="text-gray-500">React</p>
           </div>
-          <div className="flex flex-col items-center">
-            <SiTypescript className="text-5xl text-blue-300" />
-            <p className="text-gray-900">TypeScript</p>
-          </div>
+          
           <div className="flex flex-col items-center">
             <SiDjango className="text-5xl text-gray-700" />
-            <p className="text-gray-900">Django</p>
+            <p className="text-gray-500">Django</p>
           </div>
           <div className="flex flex-col items-center">
             <FontAwesomeIcon icon={faNode} className="text-5xl text-green-700" />
-            <p className="text-gray-900">Node.js</p>
+            <p className="text-gray-500">Node.js</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <SiNextdotjs className="text-5xl text-black" />
+            <p className="text-gray-500">Next.js</p>
           </div>
           <div className="flex flex-col items-center">
             <SiGnubash className="text-5xl text-gray-600" />
-            <p className="text-gray-900">Bash</p>
+            <p className="text-gray-500">Bash</p>
           </div>
           <div className="flex flex-col items-center">
             <SiTailwindcss className="text-5xl text-cyan-400" />
-            <p className="text-gray-900">Tailwind CSS</p>
+            <p className="text-gray-500">Tailwind CSS</p>
           </div>
-
+          
         </div>
       </div>
 
