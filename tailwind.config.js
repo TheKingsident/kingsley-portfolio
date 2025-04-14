@@ -61,5 +61,10 @@ export default {
       });
     },
   ],
+  safelist: [
+    {
+      pattern: /(border|text)-(orange|green|red|cyan|blue|yellow)-500/,
+    },
+  ],
 }
 
