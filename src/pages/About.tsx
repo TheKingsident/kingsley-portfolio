@@ -104,7 +104,43 @@ const About = () => {
       <h2 className="pt-10 text-4xl text-gray-900">
           Tech Stack
         </h2>
-        <div className="grid">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div className="flex flex-col items-center">
+            <img src="src/assets/c-programming-144.svg" width={50} alt="C Programming" className="text-5xl text-blue-500" />
+            <p className="text-gray-900">C</p> 
+          </div>
+          <div className="flex flex-col items-center">
+            <FontAwesomeIcon icon={faPython} className="text-5xl text-blue-500" />
+            <p className="text-gray-900">Python</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <FontAwesomeIcon icon={faJs} className="text-5xl text-yellow-500" />
+            <p className="text-gray-900">JavaScript</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <FontAwesomeIcon icon={faReact} className="text-5xl text-blue-500" />
+            <p className="text-gray-900">React</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <SiTypescript className="text-5xl text-orange-500" />
+            <p className="text-gray-900">TypeScript</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <SiDjango className="text-5xl text-blue-500" />
+            <p className="text-gray-900">Django</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <FontAwesomeIcon icon={faNode} className="text-5xl text-blue-500" />
+            <p className="text-gray-900">Node.js</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <SiGnubash className="text-5xl text-blue-500" />
+            <p className="text-gray-900">Bash</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <SiTailwindcss className="text-5xl text-blue-500" />
+            <p className="text-gray-900">Tailwind CSS</p>
+          </div>
 
         </div>
       </div>
