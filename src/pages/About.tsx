@@ -122,24 +122,24 @@ const About = () => {
             <p className="text-gray-900">React</p>
           </div>
           <div className="flex flex-col items-center">
-            <SiTypescript className="text-5xl text-orange-500" />
+            <SiTypescript className="text-5xl text-blue-300" />
             <p className="text-gray-900">TypeScript</p>
           </div>
           <div className="flex flex-col items-center">
-            <SiDjango className="text-5xl text-blue-500" />
+            <SiDjango className="text-5xl text-gray-700" />
             <p className="text-gray-900">Django</p>
           </div>
           <div className="flex flex-col items-center">
             <FontAwesomeIcon icon={faNode} className="text-5xl text-blue-500" />
-            <p className="text-gray-900">Node.js</p>
+            <p className="text-green-700">Node.js</p>
           </div>
           <div className="flex flex-col items-center">
-            <SiGnubash className="text-5xl text-blue-500" />
+            <SiGnubash className="text-5xl text-gray-600" />
             <p className="text-gray-900">Bash</p>
           </div>
           <div className="flex flex-col items-center">
             <SiTailwindcss className="text-5xl text-blue-500" />
-            <p className="text-gray-900">Tailwind CSS</p>
+            <p className="text-cyan-400">Tailwind CSS</p>
           </div>
 
         </div>
