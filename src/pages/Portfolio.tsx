@@ -8,7 +8,16 @@ const Portfolio = () => {
         <FontAwesomeIcon icon={faCube} className="text-orange-500" />
           Recent Works
       </div>
-      <h1>Portfolio</h1>
+      <div className="flex flex-col gap-10 mt-10">
+        <h1 className="text-4xl text-gray-900">
+          Portfolio
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+
+        </div>
+
+      </div>
+      
       
     </section>
   )
