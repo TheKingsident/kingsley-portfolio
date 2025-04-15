@@ -2,7 +2,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Services from "../pages/Services";
 import Experience from "../pages/Experience";
-// import Works from "../pages/Works";
+import Portfolio from "../pages/Portfolio";
 // import Blog from "../pages/Blog";
 // import Contact from "../pages/Contact";
 
@@ -16,8 +16,8 @@ const renderSection = (activeSection: string) => {
       return <Services />;
     case "experience":
       return <Experience />;
-    // case "works":
-    //   return <Works />;
+    case "portfolio":
+      return <Portfolio />;
     // case "blog":
     //   return <Blog />;
     // case "contact":

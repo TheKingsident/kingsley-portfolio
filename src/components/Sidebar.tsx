@@ -19,9 +19,9 @@ import {
 const navItems = [
   { id: "home", label: "Home", icon: faHome },
   { id: "about", label: "About", icon: faUser },
-  { id: "services", label: "Services", icon: faBriefcase },
   { id: "experience", label: "Experience", icon: faSuitcase },
-  { id: "works", label: "Works", icon: faCube },
+  { id: "portfolio", label: "Portfolio", icon: faCube },
+  { id: "services", label: "Services", icon: faBriefcase },
   { id: "blog", label: "Blog", icon: faBlog },
   { id: "contact", label: "Contact", icon: faEnvelope },
 ];
