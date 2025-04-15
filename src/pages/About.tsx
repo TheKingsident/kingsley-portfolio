@@ -12,8 +12,8 @@ const About = () => {
         <FontAwesomeIcon icon={faUser} className="text-orange-500" />
         Who am I?
       </div>
-      <div className="flex flex-col gap-10">
-        <h2 className="pt-10 text-4xl text-gray-900">
+      <div className="flex flex-col gap-10 mt-10">
+        <h2 className="text-4xl text-gray-900">
           About Me
         </h2>
         <div className="flex flex-col lg:flex-row items-start gap-10 ">
