@@ -25,9 +25,9 @@ const Portfolio = () => {
           </div>
 
           <div>
-            <div className="rounded-lg">
-              <img src="src/assets/Chattrix.png" alt="Description of image"
-              className="rounded-xl" />
+            <div className="w-{490px} rounded-lg overflow-clip">
+              <img src="src/assets/Chattrix.png" alt="Chattrix"
+              className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105" />
 
             </div>
             <h2 className="text-lg text-gray-600 font-medium mt-5">
