@@ -12,11 +12,11 @@ const Portfolio = () => {
         <h1 className="text-4xl text-gray-900">
           Portfolio
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <div className="rounded-lg">
-              <img src="src/assets/Algorithm Visualizer.png" alt="Description of image"
-              className="rounded-xl" />
+            <div className="w-{490px} rounded-lg overflow-clip">
+              <img src="src/assets/AV.png" alt="Algorithm Visualizer App"
+              className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105" />
 
             </div>
             <h2 className="text-lg text-gray-600 font-medium mt-5">
