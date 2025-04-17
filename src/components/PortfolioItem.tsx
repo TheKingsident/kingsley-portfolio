@@ -14,7 +14,7 @@ const PortfolioItemCard: React.FC<Props> = ({ item }) => {
                     className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105"
                 />
             </div>
-            <h2 className="text-lg text-gray-600 font-medium mt-5">{item.name}</h2>
+            <h2 className="text-{14px} text-gray-600 font-medium mt-5">{item.name}</h2>
         </div>
     );
 };
