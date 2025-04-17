@@ -4,12 +4,12 @@ export interface PortfolioItem {
     photo: string;
 }
 
-import AM from "../assets/Algorithm Visualizer.png";
-import Chattrix from "../assets/chattrix.png";
-import IQ from "../assets/interactive-quiz.png";
-import TM from "../assets/thrive-maker.png";
-import GSMS from "../assets/grocery-store-management-system.png";
-import MMed from "../assets/matters-medical.png";
+import AM from "../assets/AV.png";
+import Chattrix from "../assets/Chattrix.png";
+import IQ from "../assets/IQ.png";
+import TM from "../assets/TM.png";
+import GSMS from "../assets/GSMS.png";
+import MMed from "../assets/MMed.png";
 
 const portfolioItemCardData: PortfolioItem[] = [
     {
