@@ -1,3 +1,5 @@
+import kingsley from "../assets/profile-main2.png";
+
 const Home = () => {
   return (
     <section id="home" className="relative flex flex-col md:flex-row md:items-center w-full h-[80vh] px-16 bg-gradient-to-br from-white to-[#f7faff] overflow-hidden">
@@ -39,8 +41,8 @@ const Home = () => {
       <div className="relative w-[300px] md:w-[450px] lg:w-[400px] max-h-[50vh] mt-12 md:mt-0">
         <div className="absolute w-[450px] h-[450px] bg-[#ffe0cc] transform -translate-x-44 rounded-full translate-y-40 animate-pulse"></div>
         <img
-          src="src/assets/profile-main2.png"
-          alt="Profile"
+          src={kingsley}
+          alt="Kingsley Usa software engineer"
           className="relative transform -translate-x-1/3 translate-y-5"
         />
       </div>
