@@ -4,6 +4,9 @@ import { faReact, faNode, faJs } from "@fortawesome/free-brands-svg-icons";
 import { SiDjango, SiTailwindcss, SiNextdotjs, SiGnubash } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import profile from "../assets/profile-main4.jpg";
+import cprogramming from "../assets/c-programming-144.svg";
+import python from "../assets/python.svg";
 
 const About = () => {
   return (
@@ -20,7 +23,7 @@ const About = () => {
           {/* Image Section */}
           <div className="w-[300px] relative mx-auto">
             <img
-              src="src/assets/profile-main4.jpg"
+              src={profile}
               alt="Kingsley Usa"
               className="rounded-xl object-cover"
             />
@@ -106,11 +109,11 @@ const About = () => {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="flex flex-col items-center">
-            <img src="src/assets/c-programming-144.svg" width={50} alt="C Programming" className="text-5xl text-blue-500" />
+            <img src={cprogramming} width={50} alt="C Programming" className="text-5xl text-blue-500" />
             <p className="text-gray-500">C</p> 
           </div>
           <div className="flex flex-col items-center">
-            <img src="src/assets/python.svg" width={50} alt="Python" className="text-5xl text-blue-500" />
+            <img src={python} width={50} alt="Python" className="text-5xl text-blue-500" />
             <p className="text-gray-500">Python</p>
           </div>
           <div className="flex flex-col items-center">
