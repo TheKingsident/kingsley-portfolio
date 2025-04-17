@@ -6,7 +6,7 @@ const Home = () => {
       {/* Floating Circles */}
       <div className="absolute w-32 h-32 bg-orange-300 rounded-full opacity-50 animate-float top-10 left-10"></div>
       <div className="absolute w-24 h-24 bg-blue-300 rounded-full opacity-50 animate-float-delayed bottom-20 right-20"></div>
-      <div className="absolute w-16 h-16 bg-purple-300 rounded-full opacity-50 animate-float top-1/3 right-1/4"></div>
+      <div className="absolute w-16 h-16 bg-purple-300 rounded-full opacity-50 animate-float top-1/3 right-1/2"></div>
       <div className="absolute w-20 h-20 bg-pink-300 rounded-full opacity-50 animate-float-delayed bottom-1/4 left-1/4"></div>
 
       {/* Content Section */}
@@ -39,11 +39,11 @@ const Home = () => {
 
       {/* Image Section */}
       <div className="relative w-[300px] md:w-[450px] lg:w-[400px] max-h-[50vh] mt-12 md:mt-0">
-        <div className="absolute w-[450px] h-[450px] bg-[#ffe0cc] transform -translate-x-44 rounded-full translate-y-40 animate-pulse"></div>
+        <div className="absolute w-[450px] h-[450px] bg-[#ffe0cc] transform rounded-full translate-y-40 animate-pulse"></div>
         <img
           src={kingsley}
           alt="Kingsley Usa software engineer"
-          className="relative transform -translate-x-1/3 translate-y-5"
+          className="relative transform translate-x-8 translate-y-5"
         />
       </div>
     </section>
