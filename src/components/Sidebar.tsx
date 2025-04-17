@@ -1,3 +1,4 @@
+import profilePic from "../assets/profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -42,8 +43,8 @@ const Sidebar = ({ activeSection, setActiveSection }: SidebarProps) => {
       <div className="text-center mb-8">
         <div className="relative w-24 h-24 mx-auto">
           <img
-            src="src/assets/profile.jpg"
-            alt="Kingsley Usa"
+            src={profilePic}
+            alt="Kingsley Usa software engineer"
             className="w-24 h-24 rounded-full border-4 border-white object-cover"
           />
           <span className="absolute bottom-1 right-1 w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full" />
