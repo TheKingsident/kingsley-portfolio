@@ -5,6 +5,7 @@ import AV from '../assets/AV.png';
 import IQ from '../assets/IQ.png';
 import MMed from '../assets/MMed.png';
 import Chattrix from '../assets/Chattrix.png';
+import GSMS from '../assets/GSMS.png';
 
 const Portfolio = () => {
   return (
@@ -53,12 +54,23 @@ const Portfolio = () => {
 
           <div>
             <div className="w-{490px} rounded-lg overflow-clip">
-              <img src={TM} alt="Thrive Maker Marketing"
+              <img src={TM} alt="Thrive Maker Website"
               className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105" />
 
             </div>
             <h2 className="text-lg text-gray-600 font-medium mt-5">
               Thrive Maker Website
+            </h2>
+          </div>
+
+          <div>
+            <div className="w-{490px} rounded-lg overflow-clip">
+              <img src={GSMS} alt="Grocery Store Management System"
+              className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105" />
+
+            </div>
+            <h2 className="text-lg text-gray-600 font-medium mt-5">
+              Grocery Store Management System
             </h2>
           </div>
 
