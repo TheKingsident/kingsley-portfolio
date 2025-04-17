@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCube } from '@fortawesome/free-solid-svg-icons';
+import TM from '../assets/TM.png';
+import AV from '../assets/AV.png';
+import IQ from '../assets/IQ.png';
+import MMed from '../assets/MMed.png';
+import Chattrix from '../assets/Chattrix.png';
 
 const Portfolio = () => {
   return (
@@ -15,7 +20,7 @@ const Portfolio = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="w-{490px} rounded-lg overflow-clip">
-              <img src="src/assets/AV.png" alt="Algorithm Visualizer App"
+              <img src={AV} alt="Algorithm Visualizer App"
               className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105" />
 
             </div>
@@ -26,7 +31,7 @@ const Portfolio = () => {
 
           <div>
             <div className="w-{490px} rounded-lg overflow-clip">
-              <img src="src/assets/Chattrix.png" alt="Chattrix"
+              <img src={Chattrix} alt="Chattrix"
               className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105" />
 
             </div>
@@ -37,7 +42,7 @@ const Portfolio = () => {
 
           <div>
             <div className="w-{490px} rounded-lg overflow-clip">
-              <img src="src/assets/IQ.png" alt="Chattrix"
+              <img src={IQ} alt="Chattrix"
               className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105" />
 
             </div>
@@ -48,7 +53,7 @@ const Portfolio = () => {
 
           <div>
             <div className="w-{490px} rounded-lg overflow-clip">
-              <img src="src/assets/TM.png" alt="Thrive Maker Marketing"
+              <img src={TM} alt="Thrive Maker Marketing"
               className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105" />
 
             </div>
@@ -59,7 +64,7 @@ const Portfolio = () => {
 
           <div>
             <div className="w-{490px} rounded-lg overflow-clip">
-              <img src="src/assets/MMed.png" alt="Matters Medical Site"
+              <img src={MMed} alt="Matters Medical Site"
               className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105" />
 
             </div>
