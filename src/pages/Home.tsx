@@ -2,7 +2,7 @@ import kingsley from "../assets/profile-main2.png";
 
 const Home = () => {
   return (
-    <section id="home" className="relative flex flex-col md:flex-row md:items-center w-full h-[80vh] px-16 bg-gradient-to-br from-white to-[#f7faff] overflow-hidden">
+    <section id="home" className="relative flex items-center w-full min-h-screen px-16 bg-gradient-to-br from-white to-[#f7faff] overflow-hidden">
       {/* Floating Circles */}
       <div className="absolute w-32 h-32 bg-orange-300 rounded-full opacity-50 animate-float top-10 left-10"></div>
       <div className="absolute w-24 h-24 bg-blue-300 rounded-full opacity-50 animate-float-delayed bottom-20 right-20"></div>
@@ -38,7 +38,7 @@ const Home = () => {
       </div>
 
       {/* Image Section */}
-      <div className="relative w-[300px] md:w-[450px] lg:w-[400px] max-h-[50vh] mt-12 md:mt-0">
+      <div className="relative w-[450px] max-h-[50vh] mt-12 md:mt-0">
         <div className="absolute w-[450px] h-[450px] bg-[#ffe0cc] transform rounded-full translate-y-40 animate-pulse"></div>
         <img
           src={kingsley}
