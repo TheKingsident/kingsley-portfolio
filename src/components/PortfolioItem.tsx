@@ -2,11 +2,12 @@ import { PortfolioItem } from "../data/portfolioItemCardData";
 
 interface Props {
     item: PortfolioItem;
+    onClick: (item: PortfolioItem) => void;
 }
 
-const PortfolioItemCard: React.FC<Props> = ({ item }) => {
+const PortfolioItemCard: React.FC<Props> = ({ item, onClick }) => {
     return (
-        <div>
+        <div onClick={() => onClick(item)} className="flex flex-col items-center justify-center cursor-pointer">
             <div className="w-{490px} rounded-lg overflow-clip">
                 <img
                     src={item.photo}
