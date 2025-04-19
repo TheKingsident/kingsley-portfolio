@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col md:flex-row items-center justify-center w-full min-h-screen px-4 md:px-16 py-10 bg-gradient-to-br from-[#e6f0fa] to-[#f9e6f0] overflow-hidden"
+      className="relative flex flex-row items-center justify-center w-full min-h-screen px-4 md:px-16 py-10 bg-gradient-to-br from-[#e6f0fa] to-[#f9e6f0] overflow-hidden"
     >
       {/* Floating Circles */}
       <div className="absolute w-32 h-32 bg-orange-300 rounded-full opacity-50 animate-float top-10 left-10"></div>
@@ -15,13 +15,13 @@ const Home = () => {
 
 
       {/* Content Section */}
-      <div className="relative z-10 w-full md:w-1/2 text-left space-y-6 mb-10 md:mb-0">
+      <div className="flex-[2] relative z-20 w-full md:w-1/2 text-left space-y-6 mb-10 md:mb-0">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">👋</span>
-          <span className="text-lg font-semibold text-orange-500">HELLO!</span>
+          <span className="text-5xl">👋</span>
+          <span className="text-2xl font-medium text-orange-500">HELLO!</span>
         </div>
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-          I'm <span className="text-gray-900">Kingsley</span>.
+        <h1 className="text-5xl md:text-6xl font-medium text-gray-900">
+          I'm <span className="text-orange-500">Kingsley</span>.
         </h1>
         <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-md">
           I am a software engineer with experience in building modern websites and applications. I specialize in Python, React, TypeScript, and API development.
@@ -34,7 +34,7 @@ const Home = () => {
             Hire Me
           </a>
           <a
-            href="#works"
+            href="#portfolio"
             className="px-6 py-3 text-gray-700 font-semibold hover:text-orange-500 transition-all flex items-center gap-2"
           >
             View Works <span>→</span>
@@ -43,13 +43,13 @@ const Home = () => {
       </div>
 
       {/* Image Section */}
-      <div className="relative z-10 w-full md:w-1/2 flex justify-center md:justify-end">
+      <div className="relative z-10 w-full md:w-1/2 flex justify-center md:justify-end overflow-visible">
         <div className="relative">
-          <div className="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-[#ffe0cc] rounded-full -translate-y-10 md:-translate-y-20 animate-pulse"></div>
+          <div className="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-[#ffe0cc] rounded-full translate-y-12 md:translate-y-32 -translate-x-10 animate-pulse"></div>
           <img
             src={kingsley}
             alt="Kingsley Usa software engineer"
-            className="relative z-10 w-[250px] md:w-[400px] object-cover"
+            className="relative z-10 w-[400px] md:w-[400px] object-cover"
           />
         </div>
       </div>
