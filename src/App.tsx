@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import useCursorEffect from "./hooks/useCursorEffect";
 import useSidebar from "./hooks/useSidebar";
 import useScrollbarVisibility from "./hooks/useScrollbarVisibility";
 import renderSection from "./utils/renderSection";
+import Portfolio from "./pages/Portfolio";
+import ItemDetailsPopUp from "./components/ItemDetailsPopUp";
+import { PortfolioItem } from "./data/portfolioItemCardData";
 
 const App = () => {
+  const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   const [activeSection, setActiveSection] = useState("home");
   const { showScrollbar, handleShowScrollbar } = useScrollbarVisibility();
   const {
@@ -16,9 +20,22 @@ const App = () => {
 
   useCursorEffect();
 
+  useEffect(() => {
+    document.body.style.overflow = selectedItem ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedItem]);
+
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="custom-cursor"></div>
+
+      <div className="relative">
+        {selectedItem && (
+          <ItemDetailsPopUp item={selectedItem} onClose={() => setSelectedItem(null)} />
+        )}
+      </div>
 
       <button
         className="xl:hidden fixed top-4 left-4 z-50 p-2 bg-amber-50 text-orange-400 rounded-md"
@@ -69,7 +86,9 @@ const App = () => {
           onScroll={handleShowScrollbar}
           onClick={isSidebarOpen ? closeSidebar : undefined}
         >
-          <div className="animate-fade-in">{renderSection(activeSection)}</div>
+          <div className="animate-fade-in">
+          {renderSection({ activeSection, onItemClick: setSelectedItem })}
+          </div>
         </main>
       </div>
     </div>

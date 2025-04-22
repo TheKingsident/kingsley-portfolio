@@ -1,26 +1,14 @@
-import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCube } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioItem } from '../data/portfolioItemCardData';
 import portfolioItemCardData from '../data/portfolioItemCardData';
 import PortfolioItemCard from '../components/PortfolioItem';
-import ItemDetailsPopUp from '../components/ItemDetailsPopUp';
 
+interface Props {
+  onItemClick: (item: PortfolioItem) => void;
+}
 
-const Portfolio = () => {
-
-  const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
-
-  useEffect(() => {
-    if (selectedItem) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [selectedItem]);
+const Portfolio: React.FC<Props> = ({ onItemClick }) => {
 
   return (
     <section className="min-h-screen bg-gradient-to-r from-blue-50 to-rose-50 flex flex-col px-8 md:px-16 py-12 border-r-1 border-amber-50 overflow-hidden">
@@ -37,19 +25,12 @@ const Portfolio = () => {
             <PortfolioItemCard
               key={index}
               item={item}
-              onClick={setSelectedItem} />
+              onClick={onItemClick} />
           ))}
 
         </div>
 
       </div>
-
-      {selectedItem && (
-        <ItemDetailsPopUp
-          item={selectedItem}
-          onClose={() => setSelectedItem(null)}
-        />
-      )}
       
       
     </section>

@@ -3,10 +3,16 @@ import About from "../pages/About";
 import Services from "../pages/Services";
 import Experience from "../pages/Experience";
 import Portfolio from "../pages/Portfolio";
+import { PortfolioItem } from "../data/portfolioItemCardData";
 // import Blog from "../pages/Blog";
 // import Contact from "../pages/Contact";
 
-const renderSection = (activeSection: string) => {
+interface RenderSectionProps {
+  activeSection: string;
+  onItemClick?: (item: PortfolioItem) => void;
+}
+
+const renderSection = ({ activeSection, onItemClick }: RenderSectionProps) => {
   switch (activeSection) {
     case "home":
       return <Home />;
@@ -17,7 +23,7 @@ const renderSection = (activeSection: string) => {
     case "experience":
       return <Experience />;
     case "portfolio":
-      return <Portfolio />;
+      return <Portfolio onItemClick={onItemClick || (() => {})} />;
     // case "blog":
     //   return <Blog />;
     // case "contact":
