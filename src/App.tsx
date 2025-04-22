@@ -4,7 +4,6 @@ import useCursorEffect from "./hooks/useCursorEffect";
 import useSidebar from "./hooks/useSidebar";
 import useScrollbarVisibility from "./hooks/useScrollbarVisibility";
 import renderSection from "./utils/renderSection";
-import Portfolio from "./pages/Portfolio";
 import ItemDetailsPopUp from "./components/ItemDetailsPopUp";
 import { PortfolioItem } from "./data/portfolioItemCardData";
 
