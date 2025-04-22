@@ -22,7 +22,7 @@ const ItemDetailsPopUp: React.FC<Props> = ({ item, onClose }) => {
                         className="w-full h-auto rounded-lg mb-4"
                     />
                     <h2 className="text-xl font-semibold mb-2">{item.name}</h2>
-                    <p>{item.description}</p>
+                    <p className="text-sm text-gray-700">{item.description}</p>
                 </div>
             </div>
         </div>
