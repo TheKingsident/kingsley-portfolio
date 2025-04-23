@@ -10,7 +10,7 @@ import python from "../assets/python.svg";
 
 const About = () => {
   return (
-    <section id="about" className="relative flex flex-col min-h-screen w-full px-8 md:px-16 py-12 bg-gradient-to-br from-blue-50 to-purple-50 overflow-hidden">
+    <section id="about" className="relative flex flex-col min-h-screen w-full px-8 md:px-16 py-12 overflow-hidden">
       <div className="flex items-center gap-2 bg-white px-10 py-1 rounded-full w-fit text-sm">
         <FontAwesomeIcon icon={faUser} className="text-orange-500" />
         Who am I?
@@ -33,7 +33,7 @@ const About = () => {
           {/* Bio + Details Section */}
           <div className="flex-1 flex flex-col gap-6">
             {/* Bio Card */}
-            <div className="bg-white bg-opacity-60 backdrop-blur-md p-6 rounded-xl shadow">
+            <div className="bg-white/30 bg-opacity-60 backdrop-blur-md p-6 rounded-xl shadow-sm">
               <h2 className="text-xl font-semibold text-gray-800 mb-2">Bio</h2>
               <p className="text-gray-500 leading-relaxed text-[15px]">
                 Hello! I'm Kingsley Usa, and if there's one thing that gets me buzzing, it's crafting elegant and powerful software. Think of me as 
@@ -63,7 +63,7 @@ const About = () => {
 
 
 
-            <div className="grid grid-cols-2 md:grid-cols-4 text-sm bg-white bg-opacity-60 backdrop-blur-md p-4 rounded-xl shadow gap-y-20">
+            <div className="grid grid-cols-2 md:grid-cols-4 text-sm bg-white/30 bg-opacity-60 backdrop-blur-md p-4 rounded-xl shadow-sm gap-y-20">
               <div className="space-y-6">
                 <p className="text-gray-900">Age</p>
                 <p className="text-gray-900">Residence</p>

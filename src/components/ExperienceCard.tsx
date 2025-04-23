@@ -7,7 +7,7 @@ interface Props {
 
 const ExperienceCard: React.FC<Props> = ({ item }) => {
   return (
-    <div className="flex flex-col items-start rounded-lg bg-cyan-50 shadow-sm p-7">
+    <div className="flex flex-col items-start rounded-lg bg-white/30 shadow-sm p-7">
       <div className={`border border-${item.color}-500 rounded-md py-0 px-2 text-${item.color}-500 text-[12px]`}>
         {item.dateRange}
       </div>
