@@ -56,9 +56,19 @@ const App = () => {
         </svg>
       </button>
 
-      <div className="flex w-full max-w-[1500px] lg:h-[80vh] border xl:rounded-3xl border-amber-50 overflow-hidden mx-auto">
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Top Left Circle */}
+        <div className="absolute top-20 left-32 w-32 h-32 bg-pink-400/30 rounded-full animate-float"></div>
+        {/* Bottom Left Triangle */}
+        <div className="absolute bottom-5 -left-5 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-t-[60px] border-t-yellow-400/30 blur"
+        ></div>
+      </div>
+
+      <div className="flex w-full max-w-[1500px] lg:h-[80vh] border-2 border-white xl:rounded-3xl bg-white/30 backdrop-blur-sm overflow-hidden mx-auto">
+      
+        
         <div
-          className={`fixed top-0 left-0 h-full xl:w-[300px] bg-white/10 backdrop-blur-md shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
+          className={`fixed top-0 left-0 h-full xl:w-[300px] transform transition-transform duration-300 ease-in-out z-40 ${
             isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } xl:translate-x-0 xl:static xl:shadow-none`}
         >
