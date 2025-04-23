@@ -26,10 +26,11 @@ const Home = () => {
         <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-md">
           I am a software engineer with experience in building modern websites and applications. I specialize in Python, React, TypeScript, and API development.
         </p>
-        <div className="flex flex-row gap-4 mt-6">
+        
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
           <a
             href="#contact"
-            className="px-6 py-3 bg-orange-100 text-orange-500 rounded-full font-semibold hover:bg-orange-300 hover:text-white transition-all"
+            className="w-fit px-6 py-3 bg-orange-300/50 text-orange-500 font-medium rounded-2xl shadow-sm hover:text-orange-500 hover:scale-95 transition-transform duration-200"
           >
             Hire Me
           </a>

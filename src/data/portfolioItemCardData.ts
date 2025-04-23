@@ -3,6 +3,7 @@ export interface PortfolioItem {
     name: string;
     photo: string;
     description?: string;
+    component?: React.ReactNode;
 }
 
 import AM from "../assets/AV.png";
@@ -11,6 +12,9 @@ import IQ from "../assets/IQ.png";
 import TM from "../assets/TM.png";
 import GSMS from "../assets/GSMS.png";
 import MMed from "../assets/MMed.png";
+import AlgorithmVisualizerInfo from "../components/portfolio/AlgorithmVisualizerInfo";
+import ChattrixInfo from "../components/portfolio/ChattrixInfo";
+import React from "react";
 
 const portfolioItemCardData: PortfolioItem[] = [
     {
@@ -38,6 +42,7 @@ const portfolioItemCardData: PortfolioItem[] = [
         This project taught me the importance of balancing functionality 
         with user experience, as well as the value of leveraging modern 
         tools and frameworks to streamline development.`,
+        component: React.createElement(AlgorithmVisualizerInfo),
     },
     {
         id: 1,
@@ -63,6 +68,8 @@ const portfolioItemCardData: PortfolioItem[] = [
         on YouTube videos. This project highlights the integration of 
         multiple technologies to create a functional and user-friendly 
         application.`,
+        component: React.createElement(ChattrixInfo),
+        
     },
     {
         id: 2,
