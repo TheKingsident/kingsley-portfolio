@@ -67,6 +67,7 @@ const App = () => {
           <Sidebar
             activeSection={activeSection}
             setActiveSection={setActiveSection}
+            closeSidebar={closeSidebar}
           />
         </div>
 
@@ -82,7 +83,7 @@ const App = () => {
           className={`flex-1 overflow-y-auto hide-scrollbar transition-transform duration-300 ease-in-out z-20 ${
             showScrollbar ? "show-scrollbar" : "hide-scrollbar"
           } ${
-            isSidebarOpen ? "translate-x-80 blur-sm" : "translate-x-0"
+            isSidebarOpen ? "translate-x-80 blur-md" : "translate-x-0"
           } xl:blur-none xl:translate-x-0`}
           onMouseEnter={handleShowScrollbar}
           onScroll={handleShowScrollbar}

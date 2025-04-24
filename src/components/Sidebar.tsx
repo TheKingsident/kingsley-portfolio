@@ -30,11 +30,13 @@ const navItems = [
 interface SidebarProps {
   activeSection: string;
   setActiveSection: (section: string) => void;
+  closeSidebar: () => void; // Add this prop
 }
 
-const Sidebar = ({ activeSection, setActiveSection }: SidebarProps) => {
+const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps) => {
   const handleNavClick = (id: string) => {
     setActiveSection(id);
+    closeSidebar(); // Close the sidebar after setting the active section
   };
 
   return (
