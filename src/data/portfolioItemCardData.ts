@@ -14,6 +14,7 @@ import GSMS from "../assets/GSMS.png";
 import MMed from "../assets/MMed.png";
 import AlgorithmVisualizerInfo from "../components/portfolio/AlgorithmVisualizerInfo";
 import ChattrixInfo from "../components/portfolio/ChattrixInfo";
+import InteractiveQuizInfo from "../components/portfolio/InteractiveQuizInfo";
 import React from "react";
 
 const portfolioItemCardData: PortfolioItem[] = [
@@ -75,6 +76,15 @@ const portfolioItemCardData: PortfolioItem[] = [
         id: 2,
         name: "Interactive Quiz",
         photo: IQ,
+        description: `I poured my Django and Python skills into building the Interactive Quiz, a vibrant web app where users can tackle quizzes, track scores, and create their own questions. It’s a dynamic platform with secure user logins, custom accounts, and a RESTful API to share quiz data externally. I crafted a seamless experience where players can test their knowledge across topics, check leaderboards, and contribute to a growing question pool.
+        Using Django’s user model, I added custom fields for personalized accounts. The frontend, styled with Bootstrap, feels slick and works on any device. I integrated Django REST Framework to deliver secure API endpoints, ensuring only authorized users access sensitive data.
+        But the journey wasn’t easy. Extending the user model tested my authentication know-how. Preventing duplicate questions pushed my validation skills. Dynamic forms for question creation demanded mastery of Django’s formsets. Randomizing quizzes fairly? That stretched my logic-building chops. Securing the API and designing an intuitive interface were tough but rewarding challenges.
+        Challenges Faced:
+        - Custom User Model Integration: Extending Django’s user model while keeping authentication tight was a real puzzle.
+        - Quiz Validation: Blocking duplicate questions and ensuring data integrity took serious validation work.
+        - API Security: Securing endpoints for authorized access without losing usability was a balancing act.
+        - User Experience: Building a responsive, intuitive interface stretched my frontend skills.`,
+        component: React.createElement(InteractiveQuizInfo),
     },
     {
         id: 3,
