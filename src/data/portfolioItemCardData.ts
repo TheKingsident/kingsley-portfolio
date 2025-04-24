@@ -15,6 +15,7 @@ import MMed from "../assets/MMed.png";
 import AlgorithmVisualizerInfo from "../components/portfolio/AlgorithmVisualizerInfo";
 import ChattrixInfo from "../components/portfolio/ChattrixInfo";
 import InteractiveQuizInfo from "../components/portfolio/InteractiveQuizInfo";
+import GSMSInfo from "../components/portfolio/GSMSInfo";
 import React from "react";
 
 const portfolioItemCardData: PortfolioItem[] = [
@@ -95,6 +96,15 @@ const portfolioItemCardData: PortfolioItem[] = [
         id: 4,
         name: "Grocery Store Management System",
         photo: GSMS,
+        description: `I put my Python skills to the test with a Grocery Store Management System, a sleek CLI app that simplifies store operations. As a developer, I crafted a system to handle inventory, sales, and data analysis, with role-based access for managers and cashiers.
+        Managers can add or edit items and dive into detailed sales reports, while cashiers record transactions and search for details. Data lives in CSV files—groceries, transactions, and user credentials—keeping things lightweight.
+        I built features like transaction searches by date or product and sales summaries for specific periods, even adding bar charts for visual insights. The modular design splits tasks into utility modules, making the code clean and maintainable. Error handling was key to tackle invalid inputs and file issues smoothly.
+        Working through the CLI, users navigate text-based menus, ensuring a fast, no-frills experience perfect for small stores.
+        Challenges Faced:
+        - CSV Data Management: Handling CSV files for data persistence required robust file operations.
+        - Role-Based Permissions: Implementing secure, role-specific access pushed my authentication skills.
+        - Sales Chart Visualization: Creating bar charts for sales data tested my data visualization abilities.`,
+        component: React.createElement(GSMSInfo),
     },
     {
         id: 5,
