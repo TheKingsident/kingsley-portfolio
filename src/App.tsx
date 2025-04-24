@@ -65,11 +65,9 @@ const App = () => {
       </div>
 
       <div className="flex w-full max-w-[1500px] lg:h-[80vh] border-2 border-white xl:rounded-3xl bg-white/30 backdrop-blur-sm overflow-hidden mx-auto">
-      
-        
         <div
           className={`fixed top-0 left-0 h-full xl:w-[300px] transform transition-transform duration-300 ease-in-out z-40 ${
-            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+            isSidebarOpen ? "translate-x-0"  : "-translate-x-full"
           } xl:translate-x-0 xl:static xl:shadow-none`}
         >
           <Sidebar
@@ -80,7 +78,7 @@ const App = () => {
 
         {isSidebarOpen && (
           <div
-            className="xl:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-30"
+            className="xl:hidden fixed inset-0 backdrop-blur-sm z-30"
             onClick={closeSidebar}
           />
         )}
