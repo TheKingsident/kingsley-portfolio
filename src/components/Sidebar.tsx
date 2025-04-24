@@ -50,7 +50,7 @@ const Sidebar = ({ activeSection, setActiveSection }: SidebarProps) => {
           <span className="absolute bottom-1 right-1 w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full" />
         </div>
         <h2 className="text-xl font-semibold mt-4">Kingsley Usa</h2>
-        <p className="text-sm text-gray-500">Software Engineer and Web Developer</p>
+        <p className="text-sm text-gray-500 mt-5">Software Engineer and Web Developer</p>
       </div>
 
       {/* Navigation Links */}
