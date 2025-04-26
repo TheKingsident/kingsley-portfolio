@@ -80,7 +80,7 @@ const App = () => {
 
         {/* Main Content */}
         <main
-          className={`flex-1 overflow-y-auto hide-scrollbar transition-transform duration-300 ease-in-out z-20 ${
+          className={`flex-1 overflow-y-scroll transition-transform duration-300 ease-in-out z-20 ${
             showScrollbar ? "show-scrollbar" : "hide-scrollbar"
           } ${
             isSidebarOpen ? "translate-x-80 blur-md" : "translate-x-0"
@@ -89,7 +89,7 @@ const App = () => {
           onScroll={handleShowScrollbar}
           onClick={isSidebarOpen ? closeSidebar : undefined}
         >
-          <div className="animate-fade-in">
+          <div className="scroll-wrapper animate-fade-in">
           {renderSection({ activeSection, onItemClick: setSelectedItem })}
           </div>
         </main>

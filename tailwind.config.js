@@ -24,38 +24,27 @@ export default {
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
-        // Hide scrollbar by default
+        // Hide scrollbar but reserve its space
         ".hide-scrollbar": {
-          /* Hide scrollbar for Chrome, Safari, and Edge */
           "&::-webkit-scrollbar": {
-            width: "8px",
-            opacity: "0",
+            width: "thin", /* Reserve space */
+            opacity: "0", /* Hide scrollbar */
             transition: "opacity 0.3s ease",
           },
           "&::-webkit-scrollbar-track": {
-            background: "#f1f1f1",
-            "border-radius": "4px",
+            background: "transparent",
           },
           "&::-webkit-scrollbar-thumb": {
-            background: "#888",
-            "border-radius": "4px",
+            background: "transparent",
           },
-          "&::-webkit-scrollbar-thumb:hover": {
-            background: "#555",
-          },
-          /* Hide scrollbar for Firefox */
-          "scrollbar-width": "none",
-          /* Hide scrollbar for Internet Explorer and Edge (legacy) */
-          "-ms-overflow-style": "none",
+          
+          "-ms-overflow-style": "none", /* Reserve space in IE/Edge */
         },
         // Show scrollbar when the class is applied
         ".show-scrollbar": {
-          /* Show scrollbar for Chrome, Safari, and Edge */
           "&::-webkit-scrollbar": {
-            opacity: "1",
+            opacity: "1", /* Show scrollbar */
           },
-          /* Show scrollbar for Firefox */
-          "scrollbar-width": "thin",
           "scrollbar-color": "#888 #f1f1f1",
         },
       });
