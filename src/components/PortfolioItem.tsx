@@ -5,10 +5,12 @@ interface Props {
     onClick: (item: PortfolioItem) => void;
 }
 
+// PortfolioItemCard component
+// This component displays a portfolio item card with an image and name.
 const PortfolioItemCard: React.FC<Props> = ({ item, onClick }) => {
     return (
         <div onClick={() => onClick(item)} className="flex flex-col items-start justify-center cursor-pointer">
-            <div className="w-[310px] rounded-lg overflow-clip">
+            <div className="w-auto rounded-lg overflow-clip">
                 <img
                     src={item.photo}
                     alt={item.name}
