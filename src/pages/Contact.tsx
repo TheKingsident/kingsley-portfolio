@@ -57,7 +57,7 @@ function Contact() {
             </div>
             <div>
               <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-              <p className="text-sm text-gray-500">+1-202-555-0135</p>
+              <p className="text-sm text-gray-500">+234-806-674-8521</p>
             </div>
           </div>
 
@@ -68,7 +68,7 @@ function Contact() {
             </div>
             <div>
               <h3 className="text-lg font-medium text-gray-900">E-Mail</h3>
-              <p className="text-sm text-gray-500">hello@example.com</p>
+              <p className="text-sm text-gray-500">hello@kingsleyusa.dev</p>
             </div>
           </div>
         </div>

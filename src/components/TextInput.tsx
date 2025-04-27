@@ -32,7 +32,7 @@ const TextInput: React.FC<TextInputProps> = ({ type, name, placeholder, value, o
           className="w-full px-4 py-3 rounded-lg bg-white/70 text-sm text-gray-500 focus:outline-none focus:bg-white focus:ring-2 focus:ring-orange-500"
         />
       )}
-      {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
+      {error && <p className="text-[12px] text-red-500 mt-1 ml-3">{error}</p>}
     </div>
   );
 };
