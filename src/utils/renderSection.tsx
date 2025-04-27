@@ -5,7 +5,7 @@ import Experience from "../pages/Experience";
 import Portfolio from "../pages/Portfolio";
 import { PortfolioItem } from "../data/portfolioItemCardData";
 // import Blog from "../pages/Blog";
-// import Contact from "../pages/Contact";
+import Contact from "../pages/Contact";
 
 interface RenderSectionProps {
   activeSection: string;
@@ -26,8 +26,8 @@ const renderSection = ({ activeSection, onItemClick }: RenderSectionProps) => {
       return <Portfolio onItemClick={onItemClick || (() => {})} />;
     // case "blog":
     //   return <Blog />;
-    // case "contact":
-    //   return <Contact />;
+    case "contact":
+      return <Contact />;
     default:
       return <Home />;
   }
