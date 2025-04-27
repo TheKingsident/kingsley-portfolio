@@ -1,18 +1,54 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import TextInput from "../components/TextInput";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: "" }); // Clear error when user starts typing
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const newErrors = {
+      name: formData.name ? "" : "Name is required.",
+      email: formData.email ? "" : "Email is required.",
+      subject: formData.subject ? "" : "Subject is required.",
+      message: formData.message ? "" : "Message is required.",
+    };
+
+    setErrors(newErrors);
+
+    if (!newErrors.name && !newErrors.email && !newErrors.subject && !newErrors.message) {
+      console.log("Form submitted:", formData);
+    }
+  };
+
   return (
     <section id="contact" className="relative flex flex-col min-h-screen w-full px-8 md:px-16 py-12 overflow-hidden">
       <div className="flex items-center gap-2 bg-white px-10 py-1 rounded-full w-fit text-sm">
         <FontAwesomeIcon icon={faEnvelope} className="text-orange-500" />
-          Get in touch
+        Get in touch
       </div>
       <div className="flex flex-col gap-10 mt-10">
-        <h2 className="text-4xl text-gray-900">
-          Contact
-        </h2>
+        <h2 className="text-4xl text-gray-900">Contact</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Phone Card */}
           <div className="flex items-center gap-4 bg-white/30 px-6 py-4 rounded-xl shadow-sm">
@@ -39,34 +75,47 @@ function Contact() {
         {/* Send Message Section */}
         <div className="mt-5">
           <h3 className="text-2xl font-medium text-gray-900 mb-6">Send Message</h3>
-          <form className="flex flex-col gap-6">
+          <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
             {/* Name and Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input
+              <TextInput
                 type="text"
+                name="name"
                 placeholder="Your name"
-                className="w-full px-4 py-3 rounded-lg bg-white/70 text-sm focus:outline-none focus:bg-white focus:ring-2 focus:ring-orange-500"
+                value={formData.name}
+                onChange={handleChange}
+                error={errors.name}
               />
-              <input
+              <TextInput
                 type="email"
+                name="email"
                 placeholder="Email address"
-                className="w-full px-4 py-3 rounded-lg bg-white/70 text-sm focus:outline-none focus:bg-white focus:ring-2 focus:ring-orange-500"
+                value={formData.email}
+                onChange={handleChange}
+                error={errors.email}
               />
             </div>
 
             {/* Subject */}
-            <input
+            <TextInput
               type="text"
+              name="subject"
               placeholder="Subject"
-              className="w-full px-4 py-3 rounded-lg bg-white/70 text-sm focus:outline-none focus:bg-white focus:ring-2 focus:ring-orange-500"
+              value={formData.subject}
+              onChange={handleChange}
+              error={errors.subject}
             />
 
             {/* Message */}
-            <textarea
+            <TextInput
+              type="text"
+              name="message"
               placeholder="Your message here..."
-              rows={5}
-              className="w-full px-4 py-3 rounded-lg bg-white/70 text-sm focus:outline-none focus:bg-white focus:ring-2 focus:ring-orange-500"
-            ></textarea>
+              value={formData.message}
+              onChange={handleChange}
+              error={errors.message}
+              isTextArea={true}
+            />
 
             {/* Submit Button */}
             <button
@@ -78,9 +127,8 @@ function Contact() {
           </form>
         </div>
       </div>
-
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
