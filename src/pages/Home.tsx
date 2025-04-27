@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-row items-center justify-center w-full min-h-screen px-4 md:px-16 py-10 overflow-hidden"
+      className="relative flex flex-row items-center justify-center w-full min-h-screen lg:min-h-fit px-4 md:px-16 py-10 overflow-hidden"
     >
       {/* Floating Circles */}
       <div className="absolute w-32 h-32 bg-orange-300 rounded-full opacity-50 animate-float top-10 left-10"></div>
