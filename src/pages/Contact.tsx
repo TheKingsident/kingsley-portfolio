@@ -9,6 +9,7 @@ function Contact() {
     email: "",
     subject: "",
     message: "",
+    website: "",
   });
 
   const [errors, setErrors] = useState({
@@ -26,6 +27,11 @@ function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (formData.website) {
+      alert("Hmmm... Na wa o. Another Spam! Form submission blocked.");
+      return;
+    }
 
     const newErrors = {
       name: formData.name ? "" : "Name is required.",
@@ -115,6 +121,18 @@ function Contact() {
               onChange={handleChange}
               error={errors.message}
               isTextArea={true}
+            />
+
+            {/* Hidden Website Field for Spam Prevention */}
+            <input
+              type="text"
+              name="website"
+              placeholder="Website (optional)"
+              value={formData.website}
+              onChange={handleChange}
+              className="hidden"
+              autoComplete="off"
+              tabIndex={-1}
             />
 
             {/* Submit Button */}
