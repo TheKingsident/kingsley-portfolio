@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import TextInput from "../components/TextInput";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -19,13 +20,19 @@ function Contact() {
     message: "",
   });
 
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token);
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    setErrors({ ...errors, [name]: "" }); // Clear error when user starts typing
+    setErrors({ ...errors, [name]: "" });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (formData.website) {
@@ -43,7 +50,31 @@ function Contact() {
     setErrors(newErrors);
 
     if (!newErrors.name && !newErrors.email && !newErrors.subject && !newErrors.message) {
-      console.log("Form submitted:", formData);
+      try {
+        const response = await fetch("http://localhost:5000/api/form/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ...formData, captchaToken }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          console.log	("Form submitted successfully:", data);
+        } else {
+          console.error(data.error);
+        }
+        
+      } catch (error) {
+          console.error("Error submitting form:", error);
+      }
+    }
+
+    if (!captchaToken) {
+      console.log("reCAPTCHA verification failed.");
+      return;
     }
   };
 
@@ -127,12 +158,19 @@ function Contact() {
             <input
               type="text"
               name="website"
-              placeholder="Website (optional)"
+              placeholder="Website"
               value={formData.website}
               onChange={handleChange}
               className="hidden"
               autoComplete="off"
               tabIndex={-1}
+            />
+
+            {/* reCAPTCHA */}
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+              onChange={handleCaptchaChange}
+              className="mt-4"
             />
 
             {/* Submit Button */}
