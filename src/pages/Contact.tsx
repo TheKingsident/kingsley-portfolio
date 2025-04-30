@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { ImSpinner9 } from "react-icons/im";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faCheck } from "@fortawesome/free-solid-svg-icons";
 import TextInput from "../components/TextInput";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -21,6 +22,7 @@ function Contact() {
   });
 
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [submitButtonState, setSubmitButtonState] = useState<"idle" | "submitting" | "submitted">("idle");
 
   const handleCaptchaChange = (token: string | null) => {
     setCaptchaToken(token);
@@ -50,24 +52,28 @@ function Contact() {
     setErrors(newErrors);
 
     if (!newErrors.name && !newErrors.email && !newErrors.subject && !newErrors.message) {
+      setSubmitButtonState("submitting");
       try {
         const response = await fetch("http://localhost:5000/api/form/submit", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ ...formData, captchaToken }),
+          body: JSON.stringify({ formData, captchaToken }),
         });
 
         const data = await response.json();
 
         if (response.ok) {
-          console.log	("Form submitted successfully:", data);
+          setSubmitButtonState("submitted");
+          console.log("Form submitted successfully:", data);
         } else {
           console.error(data.error);
+          setSubmitButtonState("idle");
         }
         
       } catch (error) {
+          setSubmitButtonState("idle");
           console.error("Error submitting form:", error);
       }
     }
@@ -171,14 +177,28 @@ function Contact() {
               sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
               onChange={handleCaptchaChange}
               className="mt-4"
+              aria-label="reCAPTCHA"
             />
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-fit px-6 py-3 bg-orange-300/50 text-orange-500 font-medium rounded-2xl shadow-sm hover:text-orange-500 hover:scale-95 transition-transform duration-200"
+              className="w-fit px-6 py-3 bg-orange-300/50 text-orange-500 font-medium rounded-2xl shadow-sm hover:text-orange-500 hover:scale-95 transition-transform duration-200 flex items-center gap-2"
+              disabled={submitButtonState === "submitting"}
             >
-              Submit Message
+              {submitButtonState === "submitting" && (
+                <>
+                  <ImSpinner9 className="animate-spin" />
+                  Submitting Message
+                </>
+              )}
+              {submitButtonState === "submitted" && (
+                <>
+                  <FontAwesomeIcon icon={faCheck} />
+                  Message Submitted
+                </>
+              )}
+              {submitButtonState === "idle" && "Submit Message"}
             </button>
           </form>
         </div>
