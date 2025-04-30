@@ -174,7 +174,7 @@ function Contact() {
 
             {/* reCAPTCHA */}
             <ReCAPTCHA
-              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+              sitekey={import.meta.env.RECAPTCHA_SITE_KEY}
               onChange={handleCaptchaChange}
               className="mt-4"
               aria-label="reCAPTCHA"
