@@ -54,7 +54,7 @@ function Contact() {
     if (!newErrors.name && !newErrors.email && !newErrors.subject && !newErrors.message) {
       setSubmitButtonState("submitting");
       try {
-        const response = await fetch("http://localhost:5000/api/form/submit", {
+        const response = await fetch("/api/form/submit", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
