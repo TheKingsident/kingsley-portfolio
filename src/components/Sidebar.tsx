@@ -10,11 +10,10 @@ import {
   faSuitcase,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  faTwitter,
+  faXTwitter,
   faFacebook,
-  faInstagram,
-  faBehance,
-  faDribbble,
+  faLinkedinIn,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 const navItems = [
@@ -27,17 +26,26 @@ const navItems = [
   { id: "contact", label: "Contact", icon: faEnvelope },
 ];
 
+
 interface SidebarProps {
   activeSection: string;
   setActiveSection: (section: string) => void;
-  closeSidebar: () => void; // Add this prop
+  closeSidebar: () => void;
 }
 
 const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps) => {
   const handleNavClick = (id: string) => {
     setActiveSection(id);
-    closeSidebar(); // Close the sidebar after setting the active section
+    closeSidebar();
   };
+
+  const socialLinks = [
+    { icon: faLinkedinIn, url: "https://www.linkedin.com/in/thekingsident" },
+    { icon: faXTwitter, url: "https://x.com/CtrlAlt_Byte" },
+    { icon: faFacebook, url: "https://www.facebook.com/kingsident" },
+    { icon: faGithub, url: "https://github.com/TheKingsident/" },
+  ];
+  
 
   return (
     <aside className="h-full flex flex-col items-center px-6 py-8 border-r-2 border-white/50">
@@ -51,12 +59,12 @@ const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps
           />
           <span className="absolute bottom-1 right-1 w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full" />
         </div>
-        <h2 className="text-xl font-semibold mt-4">Kingsley Usa</h2>
-        <p className="text-sm text-gray-500 mt-5">Software Engineer and Web Developer</p>
+        <h2 className="text-xl font-semibold mt-4 font-heading">Kingsley Usa</h2>
+        <p className="text-sm text-gray-500 mt-5 font-body">Software Engineer and Web Developer</p>
       </div>
 
       {/* Navigation Links */}
-      <nav className="w-full">
+      <nav className="w-full font-body">
         <ul className="flex flex-col gap-3 w-full">
           {navItems.map((item) => (
             <li key={item.id}>
@@ -78,20 +86,20 @@ const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps
 
       {/* Social Media Links */}
       <div className="mt-auto flex gap-3 mb-5">
-        {[faFacebook, faTwitter, faInstagram, faDribbble, faBehance].map((icon, i) => (
+        {socialLinks.map((social, i) => (
           <a
             key={i}
-            href="#"
+            href={social.url}
             className="w-9 h-9 bg-white rounded-md flex items-center justify-center text-gray-600 hover:text-[#ff7b54] shadow-sm transition transform hover:scale-105"
           >
-            <FontAwesomeIcon icon={icon} />
+            <FontAwesomeIcon icon={social.icon} />
           </a>
         ))}
       </div>
 
       {/* Footer */}
       <footer className="text-xs text-gray-500">
-        <p>© 2025 Kingsley.</p>
+        <p>© {new Date().getFullYear()} Kingsley.</p>
       </footer>
     </aside>
   );

@@ -18,25 +18,25 @@ const Home = () => {
       <div className="flex-[2] relative z-20 w-full md:w-1/2 text-left space-y-6 mb-10 md:mb-0">
         <div className="flex items-center gap-2">
           <span className="text-5xl">👋</span>
-          <span className="text-2xl font-medium text-orange-500">HELLO!</span>
+          <span className="text-2xl font-medium font-body text-orange-500">HELLO!</span>
         </div>
-        <h1 className="text-5xl md:text-6xl font-medium text-gray-900">
+        <h1 className="text-5xl md:text-6xl font-medium font-heading text-gray-900">
           I'm <span className="text-orange-500">Kingsley</span>.
         </h1>
-        <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-md">
+        <p className="text-gray-600 text-base font-body md:text-lg leading-relaxed max-w-md">
           I am a software engineer with experience in building modern websites and applications. I specialize in Python, React, TypeScript, and API development.
         </p>
         
         <div className="flex flex-col md:flex-row gap-4 mt-6">
           <a
             href="#contact"
-            className="w-fit px-6 py-3 bg-orange-300/50 text-orange-500 font-medium rounded-2xl shadow-sm hover:text-orange-500 hover:scale-95 transition-transform duration-200"
+            className="w-fit px-6 py-3 bg-orange-300/50 text-orange-500 font-medium font-body rounded-2xl shadow-sm hover:text-orange-500 hover:scale-95 transition-transform duration-200"
           >
             Hire Me
           </a>
           <a
             href="#portfolio"
-            className="px-6 py-3 text-gray-700 font-semibold hover:text-orange-500 transition-all flex items-center gap-2"
+            className="px-6 py-3 text-gray-700 font-semibold font-body hover:text-orange-500 transition-all flex items-center gap-2"
           >
             View Works <span>→</span>
           </a>
