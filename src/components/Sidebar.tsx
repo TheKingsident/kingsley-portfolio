@@ -98,8 +98,8 @@ const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps
       </div>
 
       {/* Footer */}
-      <footer className="text-xs text-gray-500">
-        <p>© {new Date().getFullYear()} Kingsley.</p>
+      <footer className="text-xs text-gray-500 font-body">
+        <p>© {new Date().getFullYear()} Kingsley</p>
       </footer>
     </aside>
   );
