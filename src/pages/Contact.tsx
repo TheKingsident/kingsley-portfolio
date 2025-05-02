@@ -54,7 +54,7 @@ function Contact() {
     if (!newErrors.name && !newErrors.email && !newErrors.subject && !newErrors.message) {
       setSubmitButtonState("submitting");
       try {
-        const response = await fetch("/api/form/", {
+        const response = await fetch("https://kingsley-portfolio.onrender.com/api/form/submit", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

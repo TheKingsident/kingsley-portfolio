@@ -4,7 +4,11 @@ import nodemailer from "nodemailer";
 
 dotenv.config({ path: "../.env" });
 
-export const handleFormSubmission = async (req, res) => {
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Methods Not Allowed' });
+  }
+
   const { captchaToken, formData } = req.body;
 
   try {
@@ -52,4 +56,4 @@ export const handleFormSubmission = async (req, res) => {
     console.error("Error processing form submission:", error);
     res.status(500).json({ error: "Internal server error" });
   }
-};
+}
