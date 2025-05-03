@@ -13,24 +13,33 @@ interface RenderSectionProps {
 }
 
 const renderSection = ({ activeSection, onItemClick }: RenderSectionProps) => {
-  switch (activeSection) {
-    case "home":
-      return <Home />;
-    case "about":
-      return <About />;
-    case "services":
-      return <Services />;
-    case "experience":
-      return <Experience />;
-    case "portfolio":
-      return <Portfolio onItemClick={onItemClick || (() => {})} />;
-    // case "blog":
-    //   return <Blog />;
-    case "contact":
-      return <Contact />;
-    default:
-      return <Home />;
-  }
+  const getSection = () => {
+    switch (activeSection) {
+      case "home":
+        return <Home />;
+      case "about":
+        return <About />;
+      case "services":
+        return <Services />;
+      case "experience":
+        return <Experience />;
+      case "portfolio":
+        return <Portfolio onItemClick={onItemClick || (() => {})} />;
+      // case "blog":
+      //   return <Blog />;
+      case "contact":
+        return <Contact />;
+      default:
+        return <Home />;
+    }
+
+  };
+
+  return (
+    <div key={activeSection} className="animate-slideInRight">
+      {getSection()}
+    </div>
+  )
 };
 
 export default renderSection;

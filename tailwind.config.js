@@ -11,13 +11,21 @@ export default {
         'float-delayed': 'float 6s ease-in-out infinite 2s',
       },
       keyframes: {
+        slideInRight:{
+          '0%': { transform: 'translateX(100%)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
         },
       },
+      animation:{
+        slideInRight: 'slideInRight 0.7s ease-out',
+      },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+        body: ['Nunito', 'sans-serif'],
       },
     },
   },
