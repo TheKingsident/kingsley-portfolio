@@ -170,6 +170,7 @@ function Contact() {
               className="hidden"
               autoComplete="off"
               tabIndex={-1}
+              aria-hidden="true"
             />
 
             {/* reCAPTCHA */}
