@@ -1,6 +1,10 @@
 import kingsley from "../assets/profile-main2.png";
 
-const Home = () => {
+interface HomeProps {
+  setActiveSection: (section: string) => void;
+}
+
+const Home = ({ setActiveSection }: HomeProps) => {
   return (
     <section
       id="home"
@@ -28,18 +32,18 @@ const Home = () => {
         </p>
         
         <div className="flex flex-col md:flex-row gap-4 mt-6">
-          <a
-            href="#contact"
+          <button
+            onClick={() => setActiveSection("contact")}
             className="w-fit px-6 py-3 bg-orange-300/50 text-orange-500 font-medium font-body rounded-2xl shadow-sm hover:text-orange-500 hover:scale-95 transition-transform duration-200"
           >
             Hire Me
-          </a>
-          <a
-            href="#portfolio"
-            className="px-6 py-3 text-gray-700 font-semibold font-body hover:text-orange-500 transition-all flex items-center gap-2"
+          </button>
+          <button
+            onClick={() => setActiveSection("portfolio")}
+            className="px-6 py-3 text-gray-700 font-semibold font-body bg-transparent hover:text-orange-500 transition-all flex items-center gap-2"
           >
             View Works <span>→</span>
-          </a>
+          </button>
         </div>
       </div>
 
