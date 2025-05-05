@@ -68,7 +68,7 @@ const About = () => {
               </div>
               <div className="space-y-6">
                 <p className="text-gray-500">30</p>
-                <p className="text-gray-500">Sweden</p>
+                <p className="text-gray-500">Nigeria</p>
               </div>
               <div className="space-y-6">
                 <p className="text-gray-900">Email</p>
