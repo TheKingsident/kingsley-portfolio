@@ -76,3 +76,8 @@ main {
 .animate-fade-in {
   animation: fade-in 0.25s ease-out;
 }
+
+::selection {
+  background-color: #ff7b54;
+  color: #ffffff;
+}

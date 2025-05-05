@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faUser,
-  faBriefcase,
+  //faBriefcase,
   faEnvelope,
-  faBlog,
+  //faBlog,
   faCube,
   faSuitcase,
 } from "@fortawesome/free-solid-svg-icons";
@@ -21,8 +21,8 @@ const navItems = [
   { id: "about", label: "About", icon: faUser },
   { id: "experience", label: "Experience", icon: faSuitcase },
   { id: "portfolio", label: "Portfolio", icon: faCube },
-  { id: "services", label: "Services", icon: faBriefcase },
-  { id: "blog", label: "Blog", icon: faBlog },
+  //{ id: "services", label: "Services", icon: faBriefcase },
+  //{ id: "blog", label: "Blog", icon: faBlog },
   { id: "contact", label: "Contact", icon: faEnvelope },
 ];
 
@@ -64,7 +64,7 @@ const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps
       </div>
 
       {/* Navigation Links */}
-      <nav className="w-full font-body">
+      <nav className="w-full font-body mt-10">
         <ul className="flex flex-col gap-3 w-full">
           {navItems.map((item) => (
             <li key={item.id}>
