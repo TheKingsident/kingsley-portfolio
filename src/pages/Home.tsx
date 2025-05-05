@@ -8,7 +8,7 @@ const Home = ({ setActiveSection }: HomeProps) => {
   return (
     <section
       id="home"
-      className="relative flex flex-row items-center justify-center w-full min-h-screen lg:min-h-fit px-4 md:px-16 py-10 overflow-hidden"
+      className="relative flex flex-row items-center justify-center w-full min-h-screen lg:min-h-fit fluid-px py-10 overflow-visible"
     >
       {/* Floating Circles */}
       <div className="absolute w-32 h-32 bg-orange-300 rounded-full opacity-50 animate-float top-10 left-10"></div>
@@ -19,7 +19,7 @@ const Home = ({ setActiveSection }: HomeProps) => {
 
 
       {/* Content Section */}
-      <div className="flex-[2] relative z-20 w-full md:w-1/2 text-left space-y-6 mb-10 md:mb-0">
+      <div className="flex-[2] relative z-20 w-full max-w-1/2 text-left space-y-6 mb-10 md:mb-0">
         <div className="flex items-center gap-2">
           <span className="text-5xl">👋</span>
           <span className="text-2xl font-medium font-body text-orange-500">HELLO!</span>
@@ -48,13 +48,13 @@ const Home = ({ setActiveSection }: HomeProps) => {
       </div>
 
       {/* Image Section */}
-      <div className="relative z-10 w-full md:w-1/2 flex justify-center md:justify-end overflow-visible">
+      <div className="relative z-10 w-full lg:w-1/2 flex justify-center md:justify-end overflow-visible">
         <div className="relative">
-          <div className="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-[#ffe0cc] rounded-full translate-y-12 md:translate-y-32 -translate-x-10 animate-pulse"></div>
+          <div className="absolute w-full aspect-square min-w-[290px] min-h-[290px] max-w-[450px] max-h-[450px] bg-[#ffe0cc] rounded-full animate-pulse -translate-x-[20px] lg:-translate-x-[10px] translate-y-10 lg:translate-y-[170px]"></div>
           <img
             src={kingsley}
             alt="Kingsley Usa software engineer"
-            className="relative z-10 w-[400px] md:w-[400px] object-cover"
+            className="relative z-10 w-full min-w-[250px] max-w-[400px] object-cover lg:translate-y-[110px]"
           />
         </div>
       </div>
