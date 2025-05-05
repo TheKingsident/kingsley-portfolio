@@ -90,7 +90,7 @@ const App = () => {
           onClick={isSidebarOpen ? closeSidebar : undefined}
         >
           <div className="scroll-wrapper animate-fade-in">
-          {renderSection({ activeSection, onItemClick: setSelectedItem })}
+          {renderSection({ activeSection, onItemClick: setSelectedItem, setActiveSection })}
           </div>
         </main>
       </div>

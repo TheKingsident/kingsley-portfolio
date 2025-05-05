@@ -10,13 +10,14 @@ import Contact from "../pages/Contact";
 interface RenderSectionProps {
   activeSection: string;
   onItemClick?: (item: PortfolioItem) => void;
+  setActiveSection: (section: string) => void;
 }
 
-const renderSection = ({ activeSection, onItemClick }: RenderSectionProps) => {
+const renderSection = ({ activeSection, onItemClick, setActiveSection }: RenderSectionProps) => {
   const getSection = () => {
     switch (activeSection) {
       case "home":
-        return <Home />;
+        return <Home setActiveSection={setActiveSection} />;
       case "about":
         return <About />;
       case "services":
@@ -30,7 +31,7 @@ const renderSection = ({ activeSection, onItemClick }: RenderSectionProps) => {
       case "contact":
         return <Contact />;
       default:
-        return <Home />;
+        return <Home setActiveSection={setActiveSection} />;
     }
 
   };
