@@ -19,7 +19,7 @@ const Home = ({ setActiveSection }: HomeProps) => {
 
 
       {/* Content Section */}
-      <div className="flex-[2] relative z-20 w-full max-w-1/2 text-left space-y-6 mb-10 md:mb-0">
+      <div className="flex-[2] relative z-20 w-full max-w-1/2 text-left space-y-6 lg:mt-12 mb-10 md:mb-0">
         <div className="flex items-center gap-2">
           <span className="text-5xl">👋</span>
           <span className="text-2xl font-medium font-body text-orange-500">HELLO!</span>
