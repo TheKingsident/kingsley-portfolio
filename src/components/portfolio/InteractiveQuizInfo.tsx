@@ -13,7 +13,7 @@ const InteractiveQuizInfo = () => {
       </p>
 
       <p className="text-gray-600 mt-5">
-        But the journey wasn’t easy. Extending the user model tested my authentication know-how. Preventing duplicate questions pushed my validation skills. Dynamic forms for question creation demanded mastery of Django’s formsets. Randomizing quizzes fairly? That stretched my logic-building chops. Securing the API and designing an intuitive interface were tough but rewarding challenges.
+        But the journey wasn’t easy. Extending the user model tested my authentication know-how. Preventing duplicate questions pushed my validation skills. Dynamic forms for question creation demanded mastery of Django’s formsets. Randomizing quizzes fairly? That stretched my logic-building skills. Securing the API and designing an intuitive interface were tough but rewarding challenges.
       </p>
       <h2 className=" text-gray-800 mt-5">
         Challenges Faced
