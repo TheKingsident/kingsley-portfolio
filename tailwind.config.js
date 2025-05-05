@@ -9,6 +9,7 @@ export default {
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'float-delayed': 'float 6s ease-in-out infinite 2s',
+        slideInRight: 'slideInRight 0.7s ease-out',
       },
       keyframes: {
         slideInRight:{
@@ -19,9 +20,6 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
         },
-      },
-      animation:{
-        slideInRight: 'slideInRight 0.7s ease-out',
       },
       fontFamily: {
         heading: ['Poppins', 'sans-serif'],
