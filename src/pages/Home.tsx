@@ -8,13 +8,13 @@ const Home = ({ setActiveSection }: HomeProps) => {
   return (
     <section
       id="home"
-      className="relative flex flex-row items-center justify-center w-full min-h-screen lg:min-h-fit fluid-px py-10 overflow-visible"
+      className="relative flex flex-col md:flex-row items-center justify-center w-full min-h-screen xl:min-h-fit fluid-px py-10 overflow-visible"
     >
       {/* Floating Circles */}
       <div className="absolute w-32 h-32 bg-orange-300 rounded-full opacity-50 animate-float top-10 left-10"></div>
       <div className="absolute w-24 h-24 bg-blue-300 rounded-full opacity-50 animate-float-delayed bottom-20 right-20"></div>
-      <div className="absolute w-16 h-16 bg-purple-300 rounded-full opacity-50 animate-float top-1/3 right-1/2"></div>
-      <div className="absolute w-20 h-20 bg-pink-300 rounded-full opacity-50 animate-float-delayed bottom-1/4 left-1/4"></div>
+      <div className="absolute w-16 h-16 bg-purple-300 rounded-full opacity-50 animate-float top-1/3 right-1/2 bg-opacity-25 md:bg-opacity-100"></div>
+      <div className="absolute w-20 h-20 bg-pink-300 rounded-full opacity-50 animate-float-delayed bottom-1/4 left-1/4 bg-opacity-25 md:bg-opacity-100"></div>
 
 
 
@@ -40,7 +40,7 @@ const Home = ({ setActiveSection }: HomeProps) => {
           </button>
           <button
             onClick={() => setActiveSection("portfolio")}
-            className="px-6 py-3 text-gray-700 font-semibold font-body bg-transparent hover:text-orange-500 transition-all flex items-center gap-2"
+            className="w-fit pl-[5px] md:px-6 py-3 text-gray-700 font-semibold font-body bg-transparent hover:text-orange-500 transition-all flex items-center gap-2"
           >
             View Works <span>→</span>
           </button>

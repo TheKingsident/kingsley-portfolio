@@ -27,3 +27,4 @@ dist-ssr
 .env
 .vercel
 1vercel.json
+src/Appq.tsx

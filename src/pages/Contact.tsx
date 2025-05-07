@@ -100,7 +100,9 @@ function Contact() {
             </div>
             <div>
               <h3 className="text-lg font-medium text-gray-900 font-heading">Phone</h3>
-              <p className="text-sm text-gray-500 font-body">+234-806-674-8521</p>
+              <p className="text-sm text-gray-500 font-body"><a href="tel:+2348066748521" className="text-gray-500 hover:text-orange-500 transition">
+                +234-806-674-8521</a>
+              </p>
             </div>
           </div>
 
