@@ -7,7 +7,6 @@ import ItemDetailsPopUp from "./components/ItemDetailsPopUp";
 import renderSection from "./utils/renderSection";
 import { PortfolioItem } from "./data/portfolioItemCardData";
 import useCursorEffect from "./hooks/useCursorEffect";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const App = () => {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
