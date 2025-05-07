@@ -12,7 +12,7 @@ import CardBackground from "../components/CardBackground";
 
 const About = () => {
   return (
-    <section id="about" className="relative flex flex-col min-h-screen w-full px-8 md:px-16 py-12 overflow-hidden">
+    <section id="about" className="relative flex flex-col w-full px-8 md:px-16 py-12 overflow-hidden">
       <div className="flex items-center gap-2 bg-white px-10 py-1 font-body rounded-full w-fit text-sm">
         <FontAwesomeIcon icon={faUser} className="text-orange-500" />
         Who am I?
@@ -76,7 +76,9 @@ const About = () => {
               </div>
               <div className="space-y-6">
                 <p className="text-gray-500">hello@kingsleyusa.dev</p>
-                <p className="text-gray-500">+234-1234-5678</p>
+                <p><a href="tel:+2348066748521" className="text-gray-500 hover:text-orange-500 transition">
+                  +234-806-674-8521</a>
+                </p>
               </div>
             </div>
 

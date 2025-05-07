@@ -48,9 +48,9 @@ const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps
   
 
   return (
-    <aside className="h-full flex flex-col items-center px-6 py-8 border-r-2 border-white/50">
+    <aside className="flex flex-col justify-between h-full px-6 py-8 border-r border-white">
       {/* Profile Section */}
-      <div className="text-center mb-8">
+      <div className="text-center">
         <div className="relative w-24 h-24 mx-auto">
           <img
             src={profilePic}
@@ -65,13 +65,13 @@ const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps
       </div>
 
       {/* Navigation Links */}
-      <nav className="w-full font-body mt-10">
+      <nav className="w-full font-body">
         <ul className="flex flex-col gap-3 w-full">
           {navItems.map((item) => (
             <li key={item.id}>
               <button
                 onClick={() => handleNavClick(item.id)}
-                className={`flex items-center gap-3 px-4 py-2 rounded-lg w-full text-left transition font-medium ${
+                className={`flex items-center text-[15px] gap-3 px-4 py-2 rounded-lg w-full text-left transition font-medium ${
                   activeSection === item.id
                     ? "bg-white text-[#ff7b54] animate-pulse-once"
                     : "bg-transparent text-gray-600 hover:text-[#ff7b54] hover:bg-white/30"
@@ -85,23 +85,25 @@ const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps
         </ul>
       </nav>
 
-      {/* Social Media Links */}
-      <div className="mt-auto flex gap-3 mb-5">
-        {socialLinks.map((social, i) => (
-          <a
-            key={i}
-            href={social.url}
-            className="w-9 h-9 bg-white rounded-md flex items-center justify-center text-gray-600 hover:text-[#ff7b54] shadow-sm transition transform hover:scale-105"
-          >
-            <FontAwesomeIcon icon={social.icon} />
-          </a>
-        ))}
-      </div>
+      {/* Social Media Links and Footer */}
+      <div>
+        <div className="mt-auto flex gap-3 mb-5 justify-center">
+          {socialLinks.map((social, i) => (
+            <a
+              key={i}
+              href={social.url}
+              className="w-9 h-9 bg-white rounded-md flex items-center justify-center text-gray-600 hover:text-[#ff7b54] shadow-sm transition transform hover:scale-105"
+            >
+              <FontAwesomeIcon icon={social.icon} />
+            </a>
+          ))}
+        </div>
 
-      {/* Footer */}
-      <footer className="text-xs text-gray-500 font-body">
-        <p>© {new Date().getFullYear()} Kingsley</p>
-      </footer>
+        {/* Footer */}
+        <footer className="text-sm text-gray-500 font-body justify-center flex flex-col items-center">
+          <p>© {new Date().getFullYear()} Kingsley</p>
+        </footer>
+      </div>
     </aside>
   );
 };
