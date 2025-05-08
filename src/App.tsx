@@ -28,7 +28,7 @@ const App = () => {
   useCursorEffect();
 
   return (
-    <div className="w-full min-h-screen max-h-screen bg-gradient-to-br from-red-50 via-[#f0f4ff] to-[#fef9ff] text-gray-900 xl:flex relative border border-white rounded-3xl xl:max-w-[1500px] xl:max-h-[80vh] xl:min-h-[80vh] my-[7vh] xl:my-[10vh] mx-auto">
+    <div className="w-full h-screen bg-gradient-to-br from-red-50 via-[#f0f4ff] to-[#fef9ff] text-gray-900 xl:flex relative border border-white rounded-3xl xl:max-w-[1500px] xl:max-h-[80vh] xl:min-h-[80vh] my-[7vh] xl:my-[10vh] mx-auto">
       <div className="custom-cursor hidden lg:block"></div>
       {/* Pop-up modal */}
       {selectedItem && (
@@ -46,7 +46,7 @@ const App = () => {
           fixed xl:static top-0 left-0 z-40 h-[100vh] min-h-[100vh] xl:h-[80vh] xl:min-h-[80vh]
           transform transition-transform duration-300 ease-in-out lg:rounded-l-3xl
           w-[320px] xl:w-[300px] xl:translate-x-0 
-          bg-white/30 backdrop-blur-md
+          bg-white/30 backdrop-blur-sm
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
@@ -78,7 +78,7 @@ const App = () => {
            bg-white/30
           transform transition-transform duration-700 ease-in-out
           ${showScrollbar ? "show-scrollbar" : "hide-scrollbar"}
-          overflow-hidden backdrop-blur-xl mx-auto
+          overflow-hidden backdrop-blur-sm mx-auto
           ${isSidebarOpen ? "blur-sm xl:blur-none translate-x-80" : "blur-none translate-x-0"} xl:translate-x-0
         `}
         onMouseEnter={handleShowScrollbar}
@@ -86,7 +86,7 @@ const App = () => {
         onClick={isSidebarOpen ? closeSidebar : undefined}
       >
 
-        <section className="flex-1 overflow-y-auto p-6 xl:p-8 z-20">
+        <section className="flex-1 overflow-y-auto p-6 xl:p-8 z-20 mb-20 lg:mb-0">
           {renderSection({
             activeSection,
             onItemClick: setSelectedItem,

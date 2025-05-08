@@ -1,3 +1,24 @@
+## [1.0.3](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.2...v1.0.3) (2025-05-08)
+
+
+### Bug Fixes
+
+* update backdrop blur effect in Sidebar and main container for improved aesthetics ([c173e67](https://github.com/TheKingsident/kingsley-portfolio/commit/c173e67541ba6096b13297ecb27124c485af5faf))
+
+## [1.0.2](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.1...v1.0.2) (2025-05-08)
+
+
+### Bug Fixes
+
+* add bottom margin to section in App component for better spacing ([8b2715e](https://github.com/TheKingsident/kingsley-portfolio/commit/8b2715ec050ab0566b0602145a4461944f8e46dc))
+
+## [1.0.1](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.0...v1.0.1) (2025-05-08)
+
+
+### Bug Fixes
+
+* update layout for App component and adjust margin for Sidebar social links ([c5ed188](https://github.com/TheKingsident/kingsley-portfolio/commit/c5ed188426b372aa2838f587897abb80b99631cc))
+
 # 1.0.0 (2025-05-08)
 
 
