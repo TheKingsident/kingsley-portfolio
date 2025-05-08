@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.0...v1.0.1) (2025-05-08)
+
+
+### Bug Fixes
+
+* update layout for App component and adjust margin for Sidebar social links ([c5ed188](https://github.com/TheKingsident/kingsley-portfolio/commit/c5ed188426b372aa2838f587897abb80b99631cc))
+
 # 1.0.0 (2025-05-08)
 
 
