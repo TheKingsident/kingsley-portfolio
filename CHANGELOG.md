@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.1...v1.0.2) (2025-05-08)
+
+
+### Bug Fixes
+
+* add bottom margin to section in App component for better spacing ([8b2715e](https://github.com/TheKingsident/kingsley-portfolio/commit/8b2715ec050ab0566b0602145a4461944f8e46dc))
+
 ## [1.0.1](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.0...v1.0.1) (2025-05-08)
 
 
