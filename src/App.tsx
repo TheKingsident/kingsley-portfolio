@@ -28,7 +28,7 @@ const App = () => {
   useCursorEffect();
 
   return (
-    <div className="w-full min-h-screen max-h-screen bg-gradient-to-br from-red-50 via-[#f0f4ff] to-[#fef9ff] text-gray-900 xl:flex relative border border-white rounded-3xl xl:max-w-[1500px] xl:max-h-[80vh] xl:min-h-[80vh] my-[7vh] xl:my-[10vh] mx-auto">
+    <div className="w-full h-screen bg-gradient-to-br from-red-50 via-[#f0f4ff] to-[#fef9ff] text-gray-900 xl:flex relative border border-white rounded-3xl xl:max-w-[1500px] xl:max-h-[80vh] xl:min-h-[80vh] my-[7vh] xl:my-[10vh] mx-auto">
       <div className="custom-cursor hidden lg:block"></div>
       {/* Pop-up modal */}
       {selectedItem && (

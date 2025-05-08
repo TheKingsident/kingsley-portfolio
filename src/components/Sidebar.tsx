@@ -86,7 +86,7 @@ const Sidebar = ({ activeSection, setActiveSection, closeSidebar }: SidebarProps
       </nav>
 
       {/* Social Media Links and Footer */}
-      <div>
+      <div className="mb-5 lg:mb-0">
         <div className="mt-auto flex gap-3 mb-5 justify-center">
           {socialLinks.map((social, i) => (
             <a
