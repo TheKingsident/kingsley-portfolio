@@ -46,7 +46,7 @@ const App = () => {
           fixed xl:static top-0 left-0 z-40 h-[100vh] min-h-[100vh] xl:h-[80vh] xl:min-h-[80vh]
           transform transition-transform duration-300 ease-in-out lg:rounded-l-3xl
           w-[320px] xl:w-[300px] xl:translate-x-0 
-          bg-white/30 backdrop-blur-md
+          bg-white/30 backdrop-blur-sm
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
@@ -78,7 +78,7 @@ const App = () => {
            bg-white/30
           transform transition-transform duration-700 ease-in-out
           ${showScrollbar ? "show-scrollbar" : "hide-scrollbar"}
-          overflow-hidden backdrop-blur-xl mx-auto
+          overflow-hidden backdrop-blur-sm mx-auto
           ${isSidebarOpen ? "blur-sm xl:blur-none translate-x-80" : "blur-none translate-x-0"} xl:translate-x-0
         `}
         onMouseEnter={handleShowScrollbar}
