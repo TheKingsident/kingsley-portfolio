@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.2...v1.0.3) (2025-05-08)
+
+
+### Bug Fixes
+
+* update backdrop blur effect in Sidebar and main container for improved aesthetics ([c173e67](https://github.com/TheKingsident/kingsley-portfolio/commit/c173e67541ba6096b13297ecb27124c485af5faf))
+
 ## [1.0.2](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.1...v1.0.2) (2025-05-08)
 
 
