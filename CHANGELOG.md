@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.3...v1.1.0) (2025-05-08)
+
+
+### Features
+
+* add MIT License to the project ([a43b8a7](https://github.com/TheKingsident/kingsley-portfolio/commit/a43b8a7fe65ab3cfe0353e7639aba9f06e311b0f))
+
 ## [1.0.3](https://github.com/TheKingsident/kingsley-portfolio/compare/v1.0.2...v1.0.3) (2025-05-08)
 
 
