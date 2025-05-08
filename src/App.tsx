@@ -86,7 +86,7 @@ const App = () => {
         onClick={isSidebarOpen ? closeSidebar : undefined}
       >
 
-        <section className="flex-1 overflow-y-auto p-6 xl:p-8 z-20">
+        <section className="flex-1 overflow-y-auto p-6 xl:p-8 z-20 mb-20 lg:mb-0">
           {renderSection({
             activeSection,
             onItemClick: setSelectedItem,
