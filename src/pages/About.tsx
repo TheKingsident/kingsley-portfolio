@@ -85,11 +85,11 @@ const About = () => {
             {/* Download CV Button */}
             <div>
               <a
-                href="/assets/Kingsley_Usa_Resume.pdf"
+                href="/assets/Kingsley_Usa_CV.pdf"
                 className="inline-block px-6 py-3 font-body bg-orange-200 text-orange-700 font-semibold rounded-2xl shadow hover:bg-orange-300 transition"
                 download
               >
-                Download Resumé <span className="ml-2">⬇️</span>
+                Download CV <span className="ml-2">⬇️</span>
               </a>
             </div>
           </div>
