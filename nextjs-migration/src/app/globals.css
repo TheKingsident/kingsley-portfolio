@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 p-0 bg-gradient-to-r from-blue-100 to-pink-100 min-h-screen;
+  }
+
+  /* Force font loading */
+  .font-heading {
+    font-family: var(--font-poppins), 'Poppins', sans-serif !important;
+  }
+  
+  .font-body {
+    font-family: var(--font-nunito), 'Nunito', sans-serif !important;
+  }
+
+  a {
+    @apply font-medium text-blue-600 hover:text-blue-800 no-underline;
+  }
+
+  h1 {
+    @apply text-4xl leading-tight;
+  }
+
+  button {
+    @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium bg-gray-900 text-white hover:border-blue-500 focus:outline-none focus:ring;
+  }
+}
+
+/* Style the custom cursor */
+.custom-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none; /* Ensure the cursor div doesn't interfere with clicks */
+  transform: translate(-50%, -50%); /* Center the circle on the mouse pointer */
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border 0.3s ease; /* Smooth transition for size and color changes */
+  z-index: 9999;
+}
+
+/* Hover state for buttons and links */
+.custom-cursor.hover {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(128, 128, 128, 0.5); /* Grey with 50% opacity */
+  border: none; /* Remove the border on hover */
+}
+
+/* Ensure proper scrolling behavior */
+main {
+  position: relative;
+}
+
+/* Force consistent scrollbar space - works in all browsers */
+.scrollable-container {
+  overflow-y: scroll !important;
+  /* Always show scrollbar track to prevent layout shift */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  width: 8px !important;
+  background: rgba(0, 0, 0, 0.05) !important; /* Always visible track */
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05) !important; /* Always visible track */
+  border-radius: 4px;
+}
+
+/* Default state: visible track, invisible thumb */
+.scrollable-container::-webkit-scrollbar-thumb {
+  background: transparent !important;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* When showing: visible track and thumb */
+.scrollable-container.show-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.scrollable-container.show-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}
+
+::selection {
+  background-color: #ff7b54;
+  color: #ffffff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .fluid-px {
+    padding-right: clamp(16px, 5vw, 48px);
+    padding-left: clamp(16px, 5vw, 48px);
+  }
+}
