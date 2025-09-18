@@ -1,6 +1,5 @@
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser";
-import { ImSpinner9 } from "react-icons/im";
-import { faMedal, faLaptopCode, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { faReact, faNode, faJs } from "@fortawesome/free-brands-svg-icons";
 import { SiDjango, SiTailwindcss, SiNextdotjs, SiGnubash } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -37,13 +36,13 @@ const About = () => {
             <CardBackground>
               <h2 className="text-xl font-semibold font-heading text-gray-800 mb-2">Bio</h2>
               <p className="text-gray-500 leading-relaxed font-body text-[15px]">
-                Hello! I'm Kingsley Usa, and if there's one thing that gets me buzzing, it's crafting elegant and powerful software. Think of me as 
+                Hello! I&apos;m Kingsley Usa, and if there&apos;s one thing that gets me buzzing, it&apos;s crafting elegant and powerful software. Think of me as 
                 a digital architect with a serious soft spot for clean code and innovative solutions. My playground? Modern web 
                 technologies like React, TypeScript, and Node.js – I love building things that work beautifully.
               </p>
               <p className="text-gray-500 leading-relaxed font-body text-[15px] mt-4">  
-                That passion spilled over into founding Blue Wave Horizon, where we're all about creating tech that 
-                empowers freelancers, startups, and small businesses. For me, it's not just about lines of code; it's about 
+                That passion spilled over into founding Blue Wave Horizon, where we&apos;re all about creating tech that 
+                empowers freelancers, startups, and small businesses. For me, it&apos;s not just about lines of code; it&apos;s about 
                 building digital products that truly make a difference.
               </p>
               <p className="text-gray-500 leading-relaxed font-body text-[15px] mt-4">
@@ -51,10 +50,10 @@ const About = () => {
                 simplifying property searches and transactions!
               </p>
               <p className="text-gray-500 leading-relaxed font-body text-[15px] mt-4">
-                With nearly a decade under my belt in the web development world, I've independently built and launched 
+                With nearly a decade under my belt in the web development world, I&apos;ve independently built and launched 
                 multiple web applications, each a testament to my hands-on approach. And speaking of impact, 
                 I once helped a client skyrocket their website health from 86% to a near-perfect 99% through some serious 
-                SEO magic. Ultimately, I'm driven by a desire to build tech that not only functions flawlessly but also 
+                SEO magic. Ultimately, I&apos;m driven by a desire to build tech that not only functions flawlessly but also 
                 solves real-world problems with a touch of ingenuity.
               </p>
             </CardBackground>

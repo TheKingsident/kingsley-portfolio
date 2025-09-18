@@ -35,7 +35,7 @@ const Home = () => {
           <span className="text-2xl font-medium font-body text-orange-500">HELLO!</span>
         </div>
         <h1 className="text-5xl md:text-6xl font-medium font-heading text-gray-900">
-          I'm <span className="text-orange-500">Kingsley</span>.
+          I&apos;m <span className="text-orange-500">Kingsley</span>.
         </h1>
         <p className="text-gray-600 text-base font-body md:text-lg leading-relaxed">
           I am a software engineer with experience in building modern websites and applications. I specialize in Python, React, TypeScript, and API development.

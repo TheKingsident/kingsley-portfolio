@@ -17,7 +17,7 @@ const renderSection = ({ activeSection, onItemClick, setActiveSection }: RenderS
   const getSection = () => {
     switch (activeSection) {
       case "home":
-        return <Home setActiveSection={setActiveSection} />;
+        return <Home />;
       case "about":
         return <About />;
       case "services":
@@ -25,13 +25,13 @@ const renderSection = ({ activeSection, onItemClick, setActiveSection }: RenderS
       case "experience":
         return <Experience />;
       case "portfolio":
-        return <Portfolio onItemClick={onItemClick || (() => {})} />;
+        return <Portfolio />;
       // case "blog":
       //   return <Blog />;
       case "contact":
         return <Contact />;
       default:
-        return <Home setActiveSection={setActiveSection} />;
+        return <Home />;
     }
 
   };

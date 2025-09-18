@@ -1,4 +1,4 @@
-import { faBookOpen, faBriefcase, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { educationData, professionalExperienceData } from "../data/experienceData";
 import ExperienceCard from "../components/ExperienceCard";

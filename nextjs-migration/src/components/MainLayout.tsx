@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Sidebar from "@/components/Sidebar";
 import SidebarToggleButton from "@/components/SidebarToggleButton";
 import useCursorEffect from "@/hooks/useCursorEffect";

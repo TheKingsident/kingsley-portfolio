@@ -21,7 +21,7 @@ const FunFactsCard: React.FC<FunFactsCardProps> = ({ icon, title, description })
           {title}
         </h4>
         <p className="text-gray-500 text-sm leading-relaxed">
-          "{description}"
+          &ldquo;{description}&rdquo;
         </p>
       </div>
     </CardBackground>
