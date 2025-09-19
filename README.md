@@ -4,7 +4,7 @@ A modern, responsive, and visually stunning portfolio website built with React, 
 
 ---
 
-## 🌟 Project Description
+## Project Description
 
 **Kingsley's Portfolio** is a personal portfolio website designed to highlight my expertise as a software engineer specializing in modern web development. The website is tailored for potential clients, recruiters, and collaborators who want to learn more about my skills, experience, and projects.
 
@@ -15,13 +15,13 @@ A modern, responsive, and visually stunning portfolio website built with React, 
 
 ---
 
-## 🌐 Live Demo / Preview
+## Live Demo / Preview
 
 Check out the live demo here: [Kingsley Portfolio](https://www.kingsleyusa.dev/)
 
 ---
 
-## ✨ Features
+## Features
 
 ✅ **Responsive Layout**: Fully responsive design that adapts seamlessly to all screen sizes, from desktops to mobile devices.  
 ✅ **Sidebar with Smooth Transitions**: A collapsible sidebar with smooth animations for navigation.  
@@ -34,7 +34,7 @@ Check out the live demo here: [Kingsley Portfolio](https://www.kingsleyusa.dev/)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 This project was built using the following technologies:
 
@@ -57,7 +57,7 @@ This project was built using the following technologies:
 
 ---
 
-## 🚀 Getting Started / Installation
+## Getting Started / Installation
 
 Follow these steps to set up the project locally:
 
@@ -92,7 +92,7 @@ Follow these steps to set up the project locally:
 
 ---
 
-## 📖 Usage
+## Usage
 
 - **Navigate the Website**: Use the sidebar to explore different sections like Home, About, Experience, Portfolio, and Contact.  
 - **View Portfolio Items**: Click on any portfolio item to see a detailed pop-up with project information.  
@@ -100,7 +100,7 @@ Follow these steps to set up the project locally:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 Here's an overview of the project's folder structure:
 
@@ -126,7 +126,7 @@ kingsley-portfolio/
 
 ---
 
-## 🛠️ Challenges Faced
+## Challenges Faced
 
 1. **Mobile Responsiveness**  
   Ensuring the website is fully responsive and mobile-friendly required multiple iterations of the layout, especially for the sidebar and navigation.  
@@ -145,7 +145,7 @@ kingsley-portfolio/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! If you'd like to contribute, please follow these steps:
 
@@ -166,19 +166,19 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - **Riono - Personal Portfolio & CV Resume Template**: I'm not so good with designs so a big thank you to whomever made [this template](https://riono.netlify.app/). It made me test myself, pushed me to my limits. It is a beautiful design! 
 
 ---
 
-## 📞 Contact / Author Info
+## Contact / Author Info
 
 - **GitHub**: [TheKingsident](https://github.com/TheKingsident)  
 - **LinkedIn**: [Kingsley Usa](https://www.linkedin.com/in/thekingsident)  
