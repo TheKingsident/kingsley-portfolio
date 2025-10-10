@@ -60,7 +60,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`antialiased overflow-hidden ${poppins.variable} ${nunito.variable}`}>
+      <body className={`antialiased overflow-hidden ${poppins.variable} ${nunito.variable}`} suppressHydrationWarning={true}>
         <ModalProvider>
           {/* Loading Indicator */}
           <LoadingIndicator />

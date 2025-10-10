@@ -12,15 +12,28 @@ import IQ from "../assets/IQ.png";
 import TM from "../assets/TM.png";
 import GSMS from "../assets/GSMS.png";
 import MMed from "../assets/MMed.png";
+import NYSC_NS from "../assets/NYSC_NS.png";
 import AlgorithmVisualizerInfo from "../components/portfolio/AlgorithmVisualizerInfo";
 import ChattrixInfo from "../components/portfolio/ChattrixInfo";
 import InteractiveQuizInfo from "../components/portfolio/InteractiveQuizInfo";
 import GSMSInfo from "../components/portfolio/GSMSInfo";
+import NYSCNSInfo from "../components/portfolio/NYSCNSInfo";
 import React from "react";
 
 const portfolioItemCardData: PortfolioItem[] = [
     {
         id: 0,
+        name: "NYSC Registration Notification System",
+        photo: NYSC_NS,
+        description: `A Python automation tool that monitors the NYSC (National Youth Service Corps) registration portal and sends notifications to multiple contacts when registration opens.
+        The most challenging part of this project was designing a robust notification system that could reliably alert multiple users via both email and WhatsApp. Handling authentication for Zoho Mail, integrating Twilio for WhatsApp messaging, and ensuring secure management of credentials with environment variables required careful attention to detail.
+        I used Python for the core logic, leveraging libraries such as requests and BeautifulSoup to scrape the NYSC portal and detect registration status. For notifications, I implemented email alerts using smtplib and Zoho SMTP, and WhatsApp alerts using the Twilio API. Contact information is managed through a CSV file, which is processed with pandas for scalability and ease of updates.
+        This project taught me the importance of error handling, especially when dealing with external APIs and email servers. I also learned how to securely manage sensitive information using dotenv, and how to automate real-world notification workflows that can benefit a group of users.
+        Overall, this project strengthened my skills in Python automation, third-party API integration, and secure application design.`,
+        component: React.createElement(NYSCNSInfo),
+    },
+    {
+        id: 1,
         name: "Algorithm Visualizer App",
         photo: AM,
         description: `An app that visualizes algorithms.
@@ -47,7 +60,7 @@ const portfolioItemCardData: PortfolioItem[] = [
         component: React.createElement(AlgorithmVisualizerInfo),
     },
     {
-        id: 1,
+        id: 2,
         name: "Chattrix",
         photo: Chattrix,
         description: `Chattrix is a simple YouTube comment search app.
@@ -74,7 +87,7 @@ const portfolioItemCardData: PortfolioItem[] = [
         
     },
     {
-        id: 2,
+        id: 3,
         name: "Interactive Quiz",
         photo: IQ,
         description: `I poured my Django and Python skills into building the Interactive Quiz, a vibrant web app where users can tackle quizzes, track scores, and create their own questions. It’s a dynamic platform with secure user logins, custom accounts, and a RESTful API to share quiz data externally. I crafted a seamless experience where players can test their knowledge across topics, check leaderboards, and contribute to a growing question pool.
@@ -88,12 +101,12 @@ const portfolioItemCardData: PortfolioItem[] = [
         component: React.createElement(InteractiveQuizInfo),
     },
     {
-        id: 3,
+        id: 4,
         name: "Thrive Maker Website",
         photo: TM,
     },
     {
-        id: 4,
+        id: 5,
         name: "Grocery Store Management System",
         photo: GSMS,
         description: `I put my Python skills to the test with a Grocery Store Management System, a sleek CLI app that simplifies store operations. As a developer, I crafted a system to handle inventory, sales, and data analysis, with role-based access for managers and cashiers.
@@ -107,7 +120,7 @@ const portfolioItemCardData: PortfolioItem[] = [
         component: React.createElement(GSMSInfo),
     },
     {
-        id: 5,
+        id: 6,
         name: "Matters Medical Site",
         photo: MMed,
     },
