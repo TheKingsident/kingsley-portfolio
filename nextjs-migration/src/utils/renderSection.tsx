@@ -13,7 +13,7 @@ interface RenderSectionProps {
   setActiveSection: (section: string) => void;
 }
 
-const renderSection = ({ activeSection, onItemClick, setActiveSection }: RenderSectionProps) => {
+const renderSection = ({ activeSection }: RenderSectionProps) => {
   const getSection = () => {
     switch (activeSection) {
       case "home":

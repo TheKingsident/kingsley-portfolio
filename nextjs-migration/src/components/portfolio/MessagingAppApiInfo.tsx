@@ -5,11 +5,11 @@ const MessagingAppInfo = () => {
   return (
     <div>
       <p className="text-gray-600 mt-5">
-        I architected and built a messaging platform using Django REST Framework, showcasing enterprise-grade development practices from the ground up. This isn't just a chat app, it's a production-ready system with JWT authentication, custom permissions, advanced filtering, and a CI/CD pipeline that would fit right into any tech company's stack.
+        I architected and built a messaging platform using Django REST Framework, showcasing enterprise-grade development practices from the ground up. This isn&apos;t just a chat app, it&apos;s a production-ready system with JWT authentication, custom permissions, advanced filtering, and a CI/CD pipeline that would fit right into any tech company&apos;s stack.
       </p>
 
       <p className="text-gray-600 mt-5">
-        This API features UUID-based custom user models, multi-participant conversations, and a sophisticated REST API with nested routing. I implemented conversation participant-based access control, ensuring users can only access messages they're authorized to see. The API supports advanced filtering by sender, recipient, and date ranges, plus custom pagination handling up to 100 items per page while maintaining fast API performance.
+        This API features UUID-based custom user models, multi-participant conversations, and a sophisticated REST API with nested routing. I implemented conversation participant-based access control, ensuring users can only access messages they&apos;re authorized to see. The API supports advanced filtering by sender, recipient, and date ranges, plus custom pagination handling up to 100 items per page while maintaining fast API performance.
       </p>
 
       <p className="text-gray-600 mt-5">

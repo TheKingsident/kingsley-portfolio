@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CardBackground from "../components/CardBackground";
 import FunFactsCard from "../components/FunFactsCard";
 import { funFactsData } from "../data/funFactsData";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -22,9 +23,11 @@ const About = () => {
         <div className="flex flex-col lg:flex-row items-start gap-10 ">
           {/* Image Section */}
           <div className="w-[300px] relative mx-auto">
-            <img
+            <Image
               src="/assets/profile-main4.jpg"
               alt="Kingsley Usa"
+              width={300}
+              height={400}
               className="rounded-xl object-cover"
             />
             
@@ -36,7 +39,7 @@ const About = () => {
             <CardBackground>
               <h2 className="text-xl font-semibold font-heading text-gray-800 mb-2">Bio</h2>
               <p className="text-gray-500 leading-relaxed font-body text-[15px]">
-                Hey there! I’m Kingsley Usa and if there’s one thing that keeps my mind going, it’s the art of crafting software that feels both elegant and powerful. You could say I’m something of a digital architect, always sketching ideas in code and building castles of logic that (hopefully) don’t crumble under pressure. I’ve got a soft spot for clean, readable code and clever solutions that make people go, “Oh, that’s neat.”
+                Hey there! I`&apos;m Kingsley Usa and if there`&apos;s one thing that keeps my mind going, it`&apos;s the art of crafting software that feels both elegant and powerful. You could say I’m something of a digital architect, always sketching ideas in code and building castles of logic that (hopefully) don’t crumble under pressure. I’ve got a soft spot for clean, readable code and clever solutions that make people go, “Oh, that’s neat.”
               </p>
 
               <p className="text-gray-500 leading-relaxed font-body text-[15px] mt-4">
@@ -109,11 +112,11 @@ const About = () => {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10 font-body">
           <div className="flex flex-col items-center">
-            <img src="/assets/c-programming-144.svg" width={50} alt="C Programming" className="text-5xl text-blue-500" />
+            <Image src="/assets/c-programming-144.svg" width={50} height={50} alt="C Programming" className="text-5xl text-blue-500" />
             <p className="text-gray-500">C</p> 
           </div>
           <div className="flex flex-col items-center">
-            <img src="/assets/python.svg" width={50} alt="Python" className="text-5xl text-blue-500" />
+            <Image src="/assets/python.svg" width={50} height={50} alt="Python" className="text-5xl text-blue-500" />
             <p className="text-gray-500">Python</p>
           </div>
           <div className="flex flex-col items-center">

@@ -13,7 +13,7 @@ const NYSCNSInfo = () => {
       </p>
 
       <p className="text-gray-600 mt-5">
-        I deployed the code on Render and set up a cron job to run once every two hours everyday. If registration opens, I'll receove the notofcations I'd set up via email and WhatsApp message.
+        I deployed the code on Render and set up a cron job to run once every two hours everyday. If registration opens, I&apos;ll receove the notofcations I&apos;d set up via email and WhatsApp message.
       </p>
 
       <p className="text-gray-600 mt-5">

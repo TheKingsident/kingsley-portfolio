@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { PortfolioItem } from "../data/portfolioItemCardData";
+import Image from "next/image";
 
 interface Props {
     item: PortfolioItem;
@@ -21,9 +22,11 @@ const ItemDetailsPopUp: React.FC<Props> = ({ item, onClose }) => {
                     />
 
                     {/* Photo */}
-                    <img
+                    <Image
                         src={item.photo}
                         alt={item.name}
+                        width={600}
+                        height={400}
                         className="w-full h-auto rounded-lg mb-4 mt-8"
                     />
 
