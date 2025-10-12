@@ -3,6 +3,7 @@ export interface PortfolioItem {
     name: string;
     photo: string;
     description?: string;
+    videoUrl?: string;
     component?: React.ReactNode;
 }
 
@@ -12,13 +13,35 @@ import InteractiveQuizInfo from "../components/portfolio/InteractiveQuizInfo";
 import GSMSInfo from "../components/portfolio/GSMSInfo";
 import NYSCNSInfo from "@/components/portfolio/NYSCNSInfo";
 import MessagingAppInfo from "@/components/portfolio/MessagingAppApiInfo";
+import NexusApiInfo from "@/components/portfolio/NexusApiInfo";
 import React from "react";
 
 const portfolioItemCardData: PortfolioItem[] = [
     {
     id: 0,
+    name: "Nexus Movie Recommendation Platform API",
+    photo: "/assets/NexusAPI.png",
+    description: `I built Nexus from the ground up using Django REST Framework and Python, creating a comprehensive movie recommendation platform that serves 4,800+ movies with real-time TMDb API integration. This isn't just another movie database – it's a production-ready system with sophisticated trending algorithms, user authentication, favorites management, and lightning-fast Redis caching that delivers sub-200ms response times.
+
+    The platform features a robust PostgreSQL database with 7 interconnected models, supporting everything from user profiles to complex movie-genre relationships. I implemented asynchronous task processing using Celery for email notifications, ensuring users get instant feedback when they register or update their preferences. The API includes 20+ documented endpoints covering movie search, filtering, trending analytics, and user management – all automatically documented with Swagger.
+
+    But the real magic happens under the hood. I designed intelligent trending algorithms that analyze vote patterns, recency factors, and user engagement metrics to surface truly trending content. The multi-factor scoring system considers release dates, popularity momentum, and quality scores to deliver relevant recommendations that feel authentic, not just database-sorted lists.
+
+    The deployment journey taught me as much as the development. I architected the entire system for Railway cloud platform, managing PostgreSQL, Redis, and Celery services with automated CI/CD pipelines. The platform processes 40 pages of TMDb data across 6 content categories, handling rate limiting and error recovery like a production system should.
+
+    Challenges Faced:
+    - Database Schema Optimization: Designing 7 interconnected models with efficient many-to-many relationships while maintaining query performance was a complex architectural puzzle.
+    - Platform Integration: Finding and configuring Railway to host Django, PostgreSQL, Redis, and Celery services together required extensive research and deployment strategy refinement.
+    - API Design Philosophy: Determining purposeful endpoint architecture without creating unnecessary routes demanded user-centric thinking and RESTful principle mastery.
+    - Performance Engineering: Implementing tiered Redis caching strategies (5min-1hr) while balancing data freshness with response times pushed my optimization skills.
+    - External API Management: Integrating TMDb's rate-limited API with intelligent caching and batch processing while maintaining data consistency was a real-world integration challenge.`,
+    videoUrl: "https://youtu.be/CGVHR-9xmVk",
+    component: React.createElement(NexusApiInfo),
+    },
+    {
+    id: 1,
     name: "Messaging App API with DevOps and CI/CD Pipeline",
-    photo: "assets/Messaging_APP_Api.png",
+    photo: "/assets/Messaging_APP_Api.png",
     description: `I architected and built a messaging platform using Django REST Framework, showcasing enterprise-grade development practices from the ground up. This isn't just a chat app—it's a production-ready system with JWT authentication, custom permissions, advanced filtering, and a CI/CD pipeline that would fit right into any tech company's stack.
 
     The platform features UUID-based custom user models, multi-participant conversations, and a sophisticated REST API with nested routing. I implemented conversation participant-based access control, ensuring users can only access messages they're authorized to see. The API supports advanced filtering by sender, recipient, and date ranges, plus custom pagination handling up to 100 items per page—all while maintaining blazing-fast performance.
@@ -37,9 +60,9 @@ const portfolioItemCardData: PortfolioItem[] = [
     component: React.createElement(MessagingAppInfo),
     },
     {
-        id: 1,
+        id: 2,
         name: "NYSC Registration Notification System",
-        photo: "assets/NYSC_NS.png",
+        photo: "/assets/NYSC_NS.png",
         description: `A Python automation tool that monitors the NYSC (National Youth Service Corps) registration portal and sends notifications to multiple contacts when registration opens.
         The most challenging part of this project was designing a robust notification system that could reliably alert multiple users via both email and WhatsApp. Handling authentication for Zoho Mail, integrating Twilio for WhatsApp messaging, and ensuring secure management of credentials with environment variables required careful attention to detail.
         I used Python for the core logic, leveraging libraries such as requests and BeautifulSoup to scrape the NYSC portal and detect registration status. For notifications, I implemented email alerts using smtplib and Zoho SMTP, and WhatsApp alerts using the Twilio API. Contact information is managed through a CSV file, which is processed with pandas for scalability and ease of updates.
@@ -48,7 +71,7 @@ const portfolioItemCardData: PortfolioItem[] = [
         component: React.createElement(NYSCNSInfo),
     },
     {
-        id: 2,
+        id: 3,
         name: "Algorithm Visualizer App",
         photo: "/assets/AV.png",
         description: `An app that visualizes algorithms.
@@ -75,7 +98,7 @@ const portfolioItemCardData: PortfolioItem[] = [
         component: React.createElement(AlgorithmVisualizerInfo),
     },
     {
-        id: 3,
+        id: 4,
         name: "Chattrix",
         photo: "/assets/Chattrix.png",
         description: `Chattrix is a simple YouTube comment search app.
@@ -102,7 +125,7 @@ const portfolioItemCardData: PortfolioItem[] = [
         
     },
     {
-        id: 4,
+        id: 5,
         name: "Interactive Quiz",
         photo: "/assets/IQ.png",
         description: `I poured my Django and Python skills into building the Interactive Quiz, a vibrant web app where users can tackle quizzes, track scores, and create their own questions. It's a dynamic platform with secure user logins, custom accounts, and a RESTful API to share quiz data externally. I crafted a seamless experience where players can test their knowledge across topics, check leaderboards, and contribute to a growing question pool.
@@ -116,12 +139,12 @@ const portfolioItemCardData: PortfolioItem[] = [
         component: React.createElement(InteractiveQuizInfo),
     },
     {
-        id: 5,
+        id: 6,
         name: "Thrive Maker Website",
         photo: "/assets/TM.png",
     },
     {
-        id: 6,
+        id: 7,
         name: "Grocery Store Management System",
         photo: "/assets/GSMS.png",
         description: `I put my Python skills to the test with a Grocery Store Management System, a sleek CLI app that simplifies store operations. As a developer, I crafted a system to handle inventory, sales, and data analysis, with role-based access for managers and cashiers.
@@ -135,7 +158,7 @@ const portfolioItemCardData: PortfolioItem[] = [
         component: React.createElement(GSMSInfo),
     },
     {
-        id: 7,
+        id: 8,
         name: "Matters Medical Site",
         photo: "/assets/MMed.png",
     },
