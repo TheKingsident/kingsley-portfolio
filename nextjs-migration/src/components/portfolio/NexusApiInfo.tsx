@@ -17,10 +17,6 @@ const NexusApiInfo = () => {
       </p>
 
       <p className="text-gray-600 mt-5">
-        But the journey wasn’t easy. Extending the user model tested my authentication know-how. Preventing duplicate questions pushed my validation skills. Dynamic forms for question creation demanded mastery of Django’s formsets. Randomizing quizzes fairly? That stretched my logic-building skills. Securing the API and designing an intuitive interface were tough but rewarding challenges.
-      </p>
-
-      <p className="text-gray-600 mt-5">
         Deployment was its own adventure. I architected everything on the Railway cloud platform — configuring PostgreSQL, Redis, and Celery services, all wired together through automated CI/CD pipelines. Nexus pulls data from 40 pages of TMDb content across 6 categories, gracefully handling rate limits, retries, and errors like a system ready for real-world traffic.
       </p>
 
