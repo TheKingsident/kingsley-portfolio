@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CardBackground from "../components/CardBackground";
 import FunFactsCard from "../components/FunFactsCard";
 import { funFactsData } from "../data/funFactsData";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -22,9 +23,11 @@ const About = () => {
         <div className="flex flex-col lg:flex-row items-start gap-10 ">
           {/* Image Section */}
           <div className="w-[300px] relative mx-auto">
-            <img
+            <Image
               src="/assets/profile-main4.jpg"
               alt="Kingsley Usa"
+              width={300}
+              height={400}
               className="rounded-xl object-cover"
             />
             
@@ -36,25 +39,27 @@ const About = () => {
             <CardBackground>
               <h2 className="text-xl font-semibold font-heading text-gray-800 mb-2">Bio</h2>
               <p className="text-gray-500 leading-relaxed font-body text-[15px]">
-                Hello! I&apos;m Kingsley Usa, and if there&apos;s one thing that gets me buzzing, it&apos;s crafting elegant and powerful software. Think of me as 
-                a digital architect with a serious soft spot for clean code and innovative solutions. My playground? Modern web 
-                technologies like React, TypeScript, and Node.js – I love building things that work beautifully.
+                Hey there! I`&apos;m Kingsley Usa and if there`&apos;s one thing that keeps my mind going, it`&apos;s the art of crafting software that feels both elegant and powerful. You could say I’m something of a digital architect, always sketching ideas in code and building castles of logic that (hopefully) don’t crumble under pressure. I’ve got a soft spot for clean, readable code and clever solutions that make people go, “Oh, that’s neat.”
               </p>
+
+              <p className="text-gray-500 leading-relaxed font-body text-[15px] mt-4">
+                My main playground is the modern web (React, TypeScript, Django, Node.js, all that good stuff). I enjoy seeing how a few lines of code can grow into something that moves smoothly, you know, like gears turning in a well-oiled machine.
+              </p>
+
               <p className="text-gray-500 leading-relaxed font-body text-[15px] mt-4">  
-                That passion spilled over into founding Blue Wave Horizon, where we&apos;re all about creating tech that 
-                empowers freelancers, startups, and small businesses. For me, it&apos;s not just about lines of code; it&apos;s about 
-                building digital products that truly make a difference.
+                That same fire led me to start Blue Wave Horizon, a small but ambitious venture focused on building tech that lifts up everyday people, freelancers, startups, and small businesses. For me, coding isn’t just about syntax or semicolons; it’s about shaping tools that actually help people — something that makes their (and my) everyday work just a bit lighter.
               </p>
+
               <p className="text-gray-500 leading-relaxed font-body text-[15px] mt-4">
-                Right now, my focus is on launching a game-changing house-hunting platform in Nigeria – imagine 
-                simplifying property searches and transactions!
+                Right now, I’m pouring a lot of heart into a house-hunting platform we’re building in Nigeria. Picture this: a simple, trustworthy way to find and rent homes without all the stress, distrust and guesswork. It’s a bold dream, but one I truly believe can make a difference.
               </p>
+
               <p className="text-gray-500 leading-relaxed font-body text-[15px] mt-4">
-                With nearly a decade under my belt in the web development world, I&apos;ve independently built and launched 
-                multiple web applications, each a testament to my hands-on approach. And speaking of impact, 
-                I once helped a client skyrocket their website health from 86% to a near-perfect 99% through some serious 
-                SEO magic. Ultimately, I&apos;m driven by a desire to build tech that not only functions flawlessly but also 
-                solves real-world problems with a touch of ingenuity.
+                Over the years, I’ve rolled up my sleeves and built quite a few web applications from scratch. Each one taught me something new, both about technology and about patience. I once worked with a client to improve their site’s health from 86% to nearly perfect, 99% — and honestly, watching that number climb felt like watching the sunrise after a long night of debugging.
+              </p>
+
+              <p className="text-gray-500 leading-relaxed font-body text-[15px] mt-4">
+                At the end of the day, I’m driven by more than just curiosity. I want to create technology that breathes life into ideas — software that doesn’t just work, but means something.
               </p>
             </CardBackground>
 
@@ -107,11 +112,11 @@ const About = () => {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10 font-body">
           <div className="flex flex-col items-center">
-            <img src="/assets/c-programming-144.svg" width={50} alt="C Programming" className="text-5xl text-blue-500" />
+            <Image src="/assets/c-programming-144.svg" width={50} height={50} alt="C Programming" className="text-5xl text-blue-500" />
             <p className="text-gray-500">C</p> 
           </div>
           <div className="flex flex-col items-center">
-            <img src="/assets/python.svg" width={50} alt="Python" className="text-5xl text-blue-500" />
+            <Image src="/assets/python.svg" width={50} height={50} alt="Python" className="text-5xl text-blue-500" />
             <p className="text-gray-500">Python</p>
           </div>
           <div className="flex flex-col items-center">

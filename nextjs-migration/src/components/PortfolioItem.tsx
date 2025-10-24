@@ -1,4 +1,5 @@
 import { PortfolioItem } from "../data/portfolioItemCardData";
+import Image from "next/image";
 
 interface Props {
     item: PortfolioItem;
@@ -8,12 +9,19 @@ interface Props {
 // PortfolioItemCard component
 // This component displays a portfolio item card with an image and name.
 const PortfolioItemCard: React.FC<Props> = ({ item, onClick }) => {
+    // Normalize the photo URL to ensure it starts with /
+    const normalizePhotoUrl = (url: string) => {
+        return url.startsWith('/') ? url : `/${url}`;
+    };
+
     return (
         <div onClick={() => onClick(item)} className="flex flex-col items-start justify-center cursor-pointer">
             <div className="w-auto rounded-lg overflow-clip">
-                <img
-                    src={item.photo}
+                <Image
+                    src={normalizePhotoUrl(item.photo)}
                     alt={item.name}
+                    width={300}
+                    height={200}
                     className="w-full transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105"
                 />
             </div>
