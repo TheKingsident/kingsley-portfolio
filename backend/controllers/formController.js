@@ -46,9 +46,9 @@ export const handleFormSubmission = async (req, res) => {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD,
       },
-      connectionTimeout: 10000,
-      greetingTimeout: 10000,
-      socketTimeout: 10000,
+      connectionTimeout: 30000, // 30 seconds for slower connections
+      greetingTimeout: 30000,
+      socketTimeout: 30000,
       logger: true, // Enable detailed logging
       debug: true, // Enable debug output
     });

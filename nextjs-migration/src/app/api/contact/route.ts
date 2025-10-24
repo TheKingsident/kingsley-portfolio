@@ -5,6 +5,10 @@ const BACKEND_URL = process.env.NODE_ENV === 'production'
   ? 'https://kingsley-portfolio.onrender.com'
   : 'http://localhost:5000';
 
+// Configure route segment for Vercel deployment
+export const maxDuration = 60; // Maximum execution time in seconds (60s for Hobby plan)
+export const dynamic = 'force-dynamic'; // Disable caching
+
 export async function POST(request: NextRequest) {
   try {
     const { formData, captchaToken } = await request.json();
@@ -29,7 +33,7 @@ export async function POST(request: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ formData, captchaToken }),
-      signal: AbortSignal.timeout(30000), // 30 seconds to allow for email sending
+      signal: AbortSignal.timeout(55000), // 55 seconds (just under route max duration)
     });
 
     console.log('API Route - Backend response status:', backendResponse.status);
