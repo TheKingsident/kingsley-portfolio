@@ -38,7 +38,7 @@ export const handleFormSubmission = async (req, res) => {
     const emailResponse = await axios.post(
       'https://api.resend.com/emails',
       {
-        from: `${formData.name} on Your Portfoli <${process.env.FROM_ADDRESS}>`,
+        from: `${formData.name} on Your Portfolio <${process.env.FROM_ADDRESS}>`,
         to: [process.env.SITE_EMAIL],
         reply_to: formData.email,
         subject: `New Contact Form Submission: ${formData.subject}`,
