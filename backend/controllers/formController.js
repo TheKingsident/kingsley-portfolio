@@ -1,6 +1,5 @@
 import axios from "axios";
 import dotenv from "dotenv";
-import nodemailer from "nodemailer";
 
 dotenv.config({ path: "../.env" });
 
@@ -10,9 +9,7 @@ export const handleFormSubmission = async (req, res) => {
   console.log('Backend - Form submission received');
   console.log('Backend - Environment check:', {
     hasRecaptchaSecret: !!process.env.RECAPTCHA_SECRET_KEY,
-    hasEmailUser: !!process.env.EMAIL_USER,
-    hasEmailPassword: !!process.env.EMAIL_PASSWORD,
-    hasFromAddress: !!process.env.FROM_ADDRESS,
+    hasResendApiKey: !!process.env.RESEND_API_KEY,
     hasSiteEmail: !!process.env.SITE_EMAIL,
   });
 
@@ -36,56 +33,41 @@ export const handleFormSubmission = async (req, res) => {
     }
 
     console.log('Backend - reCAPTCHA verified successfully');
-    console.log('Backend - Creating email transporter...');
+    console.log('Backend - Sending email via Resend API...');
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.zeptomail.com",
-      port: 465,
-      secure: true, // true for port 465
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
+    const emailResponse = await axios.post(
+      'https://api.resend.com/emails',
+      {
+        from: `${formData.name} on Your Portfoli <${process.env.FROM_ADDRESS}>`,
+        to: [process.env.SITE_EMAIL],
+        reply_to: formData.email,
+        subject: `New Contact Form Submission: ${formData.subject}`,
+        text: `
+            Name: ${formData.name}
+            Email: ${formData.email}
+            Subject: ${formData.subject}
+
+            Message:
+            ${formData.message}
+        `,
       },
-      connectionTimeout: 30000, // 30 seconds for slower connections
-      greetingTimeout: 30000,
-      socketTimeout: 30000,
-      logger: true, // Enable detailed logging
-      debug: true, // Enable debug output
-    });
+      {
+        headers: {
+          'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        timeout: 10000,
+      }
+    );
 
-    // Verify transporter configuration
-    console.log('Backend - Verifying SMTP connection...');
-    try {
-      await transporter.verify();
-      console.log('Backend - SMTP connection verified successfully');
-    } catch (verifyError) {
-      console.error('Backend - SMTP verification failed:', verifyError);
-      throw new Error(`SMTP connection failed: ${verifyError.message}`);
-    }
-
-    const mailOptions = {
-      from: `${formData.name} on Kingsley Usa's Portfolio <${process.env.FROM_ADDRESS}>`,
-      to: process.env.SITE_EMAIL,
-      subject: `New Contact Form Submission: ${formData.subject}`,
-      text: `
-        Name: ${formData.name}
-        Email: ${formData.email}
-        Subject: ${formData.subject}
-        Message: ${formData.message}
-      `,
-    };
-
-    console.log('Backend - Sending email...');
-    await transporter.sendMail(mailOptions);
-    console.log('Backend - Email sent successfully');
-
+    console.log('Backend - Email sent successfully via Resend:', emailResponse.data);
     res.status(200).json({ message: "Form submitted successfully" });
   } catch (error) {
     console.error("Backend - Error processing form submission:", error);
     console.error("Backend - Error details:", {
       message: error.message,
       code: error.code,
-      command: error.command,
+      response: error.response?.data,
     });
     res.status(500).json({ 
       error: "Internal server error",
